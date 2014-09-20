@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Anti-Corruption University</title>
+</head>
+<body>
+    Hi, {{ request.user.first_name }}
+    <br>
+    Watch this video:
+    <iframe width="560" height="315" src="{{ video.link }}" frameborder="0" allowfullscreen></iframe>
+    <a href="{{ quiz.link }}">Take this quiz</a>
+</body>
+</html>
