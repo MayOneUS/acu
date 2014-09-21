@@ -159,7 +159,7 @@ def home(request):
             return render(request, 'thanks.html')
         else:
             # Incorrect responses; take quiz again.
-            return render(request, 'home.html', dictionary={'form': form})
+            return render(request, 'home-basic.html', dictionary={'form': form})
     else:
         form = QuizForm()
         return render(request, 'home.html', dictionary={'form': form})
