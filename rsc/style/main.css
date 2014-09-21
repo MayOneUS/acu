@@ -1,0 +1,34 @@
+#step_code{
+	background: red;
+}
+#step_quiz{
+	background: green;
+}
+#step_results{
+	background: yellow;
+}
+
+#content_display {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0em;
+}
+.step_display {
+	padding: 60px;
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.step_positioner {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+#step_video {
+	display: block;
+}
+#quiz_question_display {
+	
+}
