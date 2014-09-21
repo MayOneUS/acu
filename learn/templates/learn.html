@@ -63,7 +63,9 @@
 				<div id="step_quiz" class="step_display">
 					<form method="post">
                         {% csrf_token %}
+                        {{ form.non_field_errors }}
                         {% for field in form %}
+                            {{ field.errors }}
                             {% if not forloop.last %}
                                 <div id="question_{{ forloop.counter }}">
                                     <span>{{ field.label }}</span> {{ field }}
@@ -89,7 +91,7 @@
 				</div>
 				<!-- Inform user that info has been submitted, wait for http response -->
 				<div id="step_results" class="step_display">
-					
+
 				</div>
 			</div>
 			<!-- END Individual step display areas -->
