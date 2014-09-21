@@ -4,60 +4,54 @@ var quizQuestion ={
 	answers:  []
 };
 var quiz = {
-	questionIndex: 0,
-	questions: [
-		Object.create(quizQuestion, {
-			id: {value: 0},
-			description: {value: 'This is Question 1'},
-			answers: {value: ['Answer1', 'Answer2', 'Kittens']}
-		}),
-		Object.create(quizQuestion, {
-			id: {value: 1},
-			description: {value: 'This is Question 2'},
-			answers: {value: ['Answer1', 'Answer2', 'Kittens']}
-		}),
-		Object.create(quizQuestion, {
-			id: {value: 2},
-			description: {value: 'This is Kittens!'},
-			answers: {value: ['Kittens', 'Kittens!', 'More Kittens!']}
-		})
-	],
+	questionIndex: 0, // In order to skip the Django token which is the first child
+	questions: undefined,
+	setup: function (){
+		this.questions = document.getElementById('quiz_questions').children;
+		for(var questionIndex = 0; questionIndex < this.questions.length; questionIndex++){
+			var indexedQuestion = this.questions[questionIndex];
+			if(indexedQuestion.id){
+				var jQQ = jQuery('#'+indexedQuestion.id);
+				jQQ.fadeOut(1);
+			}
+		}
+	},
+	currentQuestion: function (){
+		if(this.questionIndex > 0 && this.questions){ // Again, because index 0 is the Django token
+			return this.questions[this.questionIndex];
+		} else{
+			return null;
+		}
+	},
 	nextQuestion: function (){
-		var nextQ = this.questions[this.questionIndex];
 		this.questionIndex++;
-		return nextQ;
+		if(this.questionIndex < this.questions.length){
+			var nextQ = this.questions[this.questionIndex];
+			return nextQ;
+		} else{
+			return null;
+		}
 	}
 };
-function loadQuestion(question){
-	var questionContainer = document.getElementById('quiz_question_display');
-	jContainer = jQuery('#quiz_question_display');
-	jContainer.fadeOut(300, function (){
-		questionContainer.innerHTML = "";
-		var questionDescription = document.createElement('span');
-		questionDescription.textContent = question.description;
-		questionContainer.appendChild(questionDescription);
-		question.answers.forEach(function (answer){
-			var answerButton = document.createElement('button');
-			answerButton.textContent = answer;
-			questionContainer.appendChild(answerButton);
-			answerButton.addEventListener("click", function(){
-				answerQuestion(question.id, answer);
-			});
-		});
-		jContainer.fadeIn(300);
-	});
+function loadQuestion(old_question, question){
+	var fader = function (){
+		var jQ2 = jQuery('#'+question.id);
+		jQ2.fadeIn(300);
+	}
+	if(old_question){
+		var jQ1 = jQuery('#'+old_question.id);
+		jQ1.fadeOut(300, fader)
+	} else{
+		fader();
+	}
 };
 function answerQuestion(questionId, answer){
-	var quizForm = document.getElementById('quiz_submitter');
-	var answerInput = document.createElement('input');
-	answerInput.name = questionId;
-	answerInput.value = answer;
+	var currentQuestion = quiz.currentQuestion();
 	var nextQuestion = quiz.nextQuestion();
-	quizForm.appendChild(answerInput);
 	if(!nextQuestion){
 		finishQuiz();
 	} else{
-		loadQuestion(nextQuestion);
+		loadQuestion(currentQuestion, nextQuestion);
 	}
 };
 
@@ -83,8 +77,9 @@ function submitQuiz() {
 };
 function videoComplete() {
 	setTimeout(function (){
+		var currentQuestion = quiz.currentQuestion();
 		var question = quiz.nextQuestion();
-		loadQuestion(question);
+		loadQuestion(currentQuestion, question);
 		jQuery('#step_video').fadeOut(500, function (){
 			jQuery('#step_quiz').fadeIn(500);
 		});
@@ -98,3 +93,5 @@ function finishQuiz() {
 	}, 0);
 };
 jQuery('#redemption_code').submit(submitQuiz);
+quiz.setup();
+videoComplete();
