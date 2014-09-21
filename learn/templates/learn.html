@@ -61,7 +61,20 @@
 				</div>
 				<!-- Display and Take Quiz -->
 				<div id="step_quiz" class="step_display">
-					<div id="quiz_question_display"></div>
+					<form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% if not forloop.last %}
+                                <div id="question_{{ forloop.counter }}">
+                                    <span>{{ field.label }}</span> {{ field }}
+                                </div>
+                            {% else %}
+                                <div id="code">
+                                    <span>{{ field.label }}</span> {{ field }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </form>
 				</div>
 				<!-- Display Code Form, Submit Code -->
 				<div id="step_code" class="step_display">
@@ -80,21 +93,6 @@
 				</div>
 			</div>
 			<!-- END Individual step display areas -->
-            <!-- Begin hidden question storage -->
-            <form>
-                {% for field in form %}
-                    {% if not forloop.last %}
-                        <div id="question_{{ forloop.counter }}">
-                            {{ field.label }} {{ field }}
-                        </div>
-                    {% else %}
-                        <div id="code">
-                            {{ field.label }}{{ field }}
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </form>
-            <!-- End hidden question storage -->
 			<!-- Begin Hidden Submission Form -- This form is used to submit the data to the server at the end of the quiz. -->
 			<div>
 				<form id="quiz_submitter" action="validation.html" method="post">
