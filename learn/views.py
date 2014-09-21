@@ -2,19 +2,10 @@ from collections import namedtuple
 from datetime import datetime
 
 from django import forms
-from django.core.urlresolvers import reverse, reverse_lazy
-from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from django.views.generic import FormView
 
 from .models import Token
 
-
-# def watch_video(request):
-#     if not request.user.is_authenticated():
-#         return HttpResponseRedirect('home')
-#     # TODO: get user's prescribed video, or a default.
-#     return render(request, 'learn.html', dictionary={'video': Video.objects.all()[0]})
 
 Question = namedtuple("Question", ['prompt', 'choices', 'answer'])
 
@@ -80,24 +71,24 @@ quiz = [
             "Consulting more-experienced or trustworthy people",
             "All of the Above      x",
         ],
-        4
+        3
     ),
 ]
 
 
 # TODO: multiple quiz forms, or random subset of questions.
 class QuizForm(forms.Form):
-    YES, NO, SOME = 'yes', 'no', 'some'
-    WATCHED_VIDEO_CHOICES = (
-        (NO, 'No'),
-        (YES, 'Yes'),
-        (SOME, 'Some of it...')
-    )
-    watched_video = forms.ChoiceField(
-        choices=WATCHED_VIDEO_CHOICES,
-        label="Did you watch the video? (No lying.)",
-        widget=forms.RadioSelect,
-    )
+    # YES, NO, SOME = 'yes', 'no', 'some'
+    # WATCHED_VIDEO_CHOICES = (
+    #     (NO, 'No'),
+    #     (YES, 'Yes'),
+    #     (SOME, 'Some of it...')
+    # )
+    # watched_video = forms.ChoiceField(
+    #     choices=WATCHED_VIDEO_CHOICES,
+    #     label="Did you watch the video? (No lying.)",
+    #     widget=forms.RadioSelect,
+    # )
 
     # Unsure how dynamically monkey-patching these fields on would work with
     # the Form class' declarative syntax, so explicitly declaring all questions for now.
@@ -150,7 +141,7 @@ class QuizForm(forms.Form):
 
 
     def clean_code(self):
-        code = self.cleaned_data['code']
+        code = self.cleaned_data['redemption_code']
         if Token.objects.filter(code=code).exists():
             token = Token.objects.get(code=code)
             if token.is_valid:
@@ -163,8 +154,9 @@ class QuizForm(forms.Form):
 
     def clean(self):
         for i, question in enumerate(quiz):
-            if self.cleaned_data['q{}'.format(i)] != question.answer:  # dynamic hax!
-                raise forms.ValidationError('Sorry, at least one quiz answer is incorrect.')
+            field_name = 'q{}'.format(i)  # gross hax
+            if field_name in self.cleaned_data and self.cleaned_data[field_name] != str(question.answer):
+                raise forms.ValidationError('Sorry, at least one quiz answer is incorrect.'.format(field_name, self.cleaned_data[field_name], question.answer))
         return self.cleaned_data
 
 
@@ -183,34 +175,18 @@ class QuizForm(forms.Form):
 #             raise forms.ValidationError('This code is invalid.')
 
 
-def learn(request):
+def home(request):
     if request.method == 'POST':
         # TODO: throttling
         form = QuizForm(request.POST)
         if form.is_valid():
-            token = Token.objects.get(code=form.data['code'])
+            token = Token.objects.get(code=form.data['redemption_code'])
             token.redeemed = datetime.now()
             token.save()
             return render(request, 'thanks.html')
         else:
             # Incorrect responses; take quiz again.
-            return render(request, 'learn.html', dictionary={'form': form})
+            return render(request, 'home.html', dictionary={'form': form})
     else:
         form = QuizForm()
-        return render(request, 'learn.html', dictionary={'form': form})
-#
-#
-# def redeem(request):
-#     if request.method == 'POST':
-#         # TODO: throttling
-#         form = CodeRedeemForm(request.POST)
-#         if form.is_valid():
-#             return HttpResponseRedirect('thanks')
-#         else:
-#             return render(request, 'redeem.html', dictionary={'form': form})
-#     else:
-#         form = CodeRedeemForm()
-#         return render(request, 'redeem.html', dictionary={'form': form})
-
-def thanks(request):
-    return render(request, 'thanks.html')
+        return render(request, 'home.html', dictionary={'form': form})
