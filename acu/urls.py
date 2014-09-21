@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from learn.views import LearnView#, RedeemView
 
 urlpatterns = patterns('',
     # Examples:
@@ -8,5 +9,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^learn/', 'learn.views.watch_video', name='learn'),
+    url(r'^learn/', 'learn.views.learn', name='learn'),
+    # url(r'^redeem/', RedeemView.as_view(), name='redeem'),
+    # url(r'^thanks/', 'learn.views.thanks', name='thanks'),
 )

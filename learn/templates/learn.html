@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Anti-Corruption University</title>
+</head>
+<body>
+    Watch this video:
+    <iframe width="560" height="315" src="//www.youtube.com/embed/Kdgt1ZHkvnM" frameborder="0" allowfullscreen></iframe>
+    <a href="{{ quiz.link }}">Take this quiz</a>
+    <form action="{% url 'learn' %}" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

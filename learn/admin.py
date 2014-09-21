@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from learn.models import Video
+from .models import Token
 
 
-admin.site.register(Video)
+admin.site.register(Token)
