@@ -7,7 +7,6 @@
 			<!-- See footer.html for including scripts. -->
         </head>
         <body>
-<!-- ======================== Begin Non-template Content ========================== -->
 			<!-- BEGIN Twitter Bootstrap Nav Bar -->
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container-fluid">
@@ -29,7 +28,11 @@
 				</div>
 			</nav>
 			<!-- END Twitter Bootstrap Nav Bar -->
-			<!-- BEGIN Individual step display areas -->
+
+
+<!-- ======================== Begin Non-template Content ========================== -->
+
+            <!-- BEGIN Individual step display areas -->
 			<div id="content_display">
 				<!-- Display and Watch Video -->
 				<div id="step_video" class="step_display">
@@ -77,10 +80,26 @@
 				</div>
 			</div>
 			<!-- END Individual step display areas -->
-			<!-- Begin Hidden Form -- This form is used to submit the data to the server at the end of the quiz. -->
-			<div>
-				<form id="quiz_submitter" action="validation.html" method="post">
-				</form>
+            <!-- Begin hidden question storage -->
+            <form>
+
+
+                        <div id="question_1">
+                            Did you watch the video? (No lying.) <select id="id_watched_video" name="watched_video">
+<option value="no">No</option>
+<option value="yes">Yes</option>
+<option value="some">Some of it...</option>
+</select>
+                        </div>
+
+
+
+                        <div id="code">
+                            Code <input id="id_code" maxlength="5" name="code" type="text" />
+                        </div>
+
+
+            </form>
 			</div>
 <!-- ========================  End Non-template Content =========================== -->
 			<script src="rsc/script/jquery-1.11.1.min.js"></script>

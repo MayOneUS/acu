@@ -26,7 +26,9 @@ class QuizForm(forms.Form):
     )
     watched_video = forms.ChoiceField(
         choices=WATCHED_VIDEO_CHOICES,
-        label="Did you watch the video? (No lying.)")
+        label="Did you watch the video? (No lying.)",
+        # widget=forms.RadioSelect,
+    )
 
     code = forms.CharField(max_length=5)
 
