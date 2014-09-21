@@ -78,19 +78,7 @@ quiz = [
 
 # TODO: multiple quiz forms, or random subset of questions.
 class QuizForm(forms.Form):
-    # YES, NO, SOME = 'yes', 'no', 'some'
-    # WATCHED_VIDEO_CHOICES = (
-    #     (NO, 'No'),
-    #     (YES, 'Yes'),
-    #     (SOME, 'Some of it...')
-    # )
-    # watched_video = forms.ChoiceField(
-    #     choices=WATCHED_VIDEO_CHOICES,
-    #     label="Did you watch the video? (No lying.)",
-    #     widget=forms.RadioSelect,
-    # )
-
-    # Unsure how dynamically monkey-patching these fields on would work with
+    # Unsure how dynamically monkey-patching these fields in would work with
     # the Form class' declarative syntax, so explicitly declaring all questions for now.
     q0 = forms.ChoiceField(
         widget=forms.RadioSelect,
@@ -140,7 +128,7 @@ class QuizForm(forms.Form):
         return response
 
 
-    def clean_code(self):
+    def clean_redemption_code(self):
         code = self.cleaned_data['redemption_code']
         if Token.objects.filter(code=code).exists():
             token = Token.objects.get(code=code)
@@ -158,21 +146,6 @@ class QuizForm(forms.Form):
             if field_name in self.cleaned_data and self.cleaned_data[field_name] != str(question.answer):
                 raise forms.ValidationError('Sorry, at least one quiz answer is incorrect.'.format(field_name, self.cleaned_data[field_name], question.answer))
         return self.cleaned_data
-
-
-# class CodeRedeemForm(forms.Form):
-#     code = forms.CharField(max_length=5)
-#
-#     def clean_code(self):
-#         code = self.cleaned_data['code']
-#         if Token.objects.filter(code=code).exists():
-#             token = Token.objects.get(code=code)
-#             if token.is_valid:
-#                 return code
-#             else:
-#                 raise forms.ValidationError('This code has already been used.')
-#         else:
-#             raise forms.ValidationError('This code is invalid.')
 
 
 def home(request):
