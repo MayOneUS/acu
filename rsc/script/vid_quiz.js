@@ -6,13 +6,21 @@ var quizQuestion ={
 var quiz = {
 	questionIndex: 0, // In order to skip the Django token which is the first child
 	questions: undefined,
+	quizTimerHack: false,
 	setup: function (){
-		this.questions = document.getElementById('quiz_questions').children;
+		this.questions = document.getElementById('quiz_form').children;
 		for(var questionIndex = 0; questionIndex < this.questions.length; questionIndex++){
 			var indexedQuestion = this.questions[questionIndex];
 			if(indexedQuestion.id){
 				var jQQ = jQuery('#'+indexedQuestion.id);
 				jQQ.fadeOut(1);
+				var labelChildren = jQQ.find('label');
+				for(var labelIndex = 0; labelIndex < labelChildren.length; labelIndex++){
+					var indexedLabel = labelChildren[labelIndex];
+					indexedLabel.addEventListener('click', function (){
+						answerQuestion();
+					})
+				}
 			}
 		}
 	},
@@ -39,16 +47,23 @@ function loadQuestion(old_question, question){
 		jQ2.fadeIn(300);
 	}
 	if(old_question){
+		console.log('Fading Out '+Math.random())
 		var jQ1 = jQuery('#'+old_question.id);
 		jQ1.fadeOut(300, fader)
 	} else{
 		fader();
 	}
 };
-function answerQuestion(questionId, answer){
+function answerQuestion(){
+	if(quiz.quizTimerHack){ return}
+	quiz.quizTimerHack = true;
+	setTimeout(function (){
+		quiz.quizTimerHack = false
+	}, 750);
 	var currentQuestion = quiz.currentQuestion();
 	var nextQuestion = quiz.nextQuestion();
 	if(!nextQuestion){
+		console.log('Done!')
 		finishQuiz();
 	} else{
 		loadQuestion(currentQuestion, nextQuestion);

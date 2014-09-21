@@ -2,7 +2,6 @@
 	background: red;
 }
 #step_quiz{
-	background: green;
 }
 #step_results{
 	background: yellow;
@@ -26,12 +25,40 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-#step_quiz {
+#step_video {
 	display: block;
 }
-#quiz_question_display {
-	
+#step_quiz {
+	text-align: center;
 }
 #quiz_submitter {
 	display: none;
+}
+#quiz_form{
+	margin-top: 3em;
+	display: inline-block;
+	text-align: left;
+}
+#quiz_form ul{
+	list-style: none;
+}
+input[type="radio"]{
+	opacity: 0;
+	display: none;
+}
+#quiz_form label{
+	margin: 0.25em;
+	display: inline-block;
+	padding: 0.12em 1em;;
+	border: 1px solid black;
+	border-radius: 0.2em;
+}
+#quiz_form label:hover{
+	background: #ccffcc;
+}
+#quiz_form{
+	font-size: x-large;
+	padding: 1em 3em;
+	border: 1px solid grey;
+	border-radius: 0.25em;
 }
