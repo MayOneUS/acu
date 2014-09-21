@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+	<html>
+            <meta charset="UTF-8" />
+            <title>ACU: Anti Corruption University</title>
+            <link rel="stylesheet" href="rsc/style/main.css" />
+			<link rel="stylesheet" href="rsc/tbs/css/bootstrap.min.css" />
+			<!-- See footer.html for including scripts. -->
+        </head>
+        <body>
+			<!-- BEGIN Twitter Bootstrap Nav Bar -->
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">LOGO!</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="about">About</a></li>
+							<li><a href="contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- END Twitter Bootstrap Nav Bar -->
+
+
+<!-- ======================== Begin Non-template Content ========================== -->
+
+            <!-- BEGIN Individual step display areas -->
+			<div id="content_display">
+				<!-- Display and Watch Video -->
+				<div id="step_video" class="step_display">
+					<div class="step_positioner">
+						<div id="player"></div>
+						<script src="http://www.youtube.com/player_api"></script>
+						<script>
+							// create youtube player
+							var player;
+							function onYouTubePlayerAPIReady() {
+								player = new YT.Player('player', {
+									height: '390',
+									width: '640',
+									videoId: '0Bmhjf0rKe8',
+									events: {
+										'onStateChange': function (event){
+											if(event.data === 0){ // 0 == Video Ended
+												videoComplete();
+											}
+										}
+									}
+								});
+							};
+						</script>
+					</div>
+				</div>
+				<!-- Display and Take Quiz -->
+				<div id="step_quiz" class="step_display">
+					<form method="post">
+                        <input type='hidden' name='csrfmiddlewaretoken' value='lmRxlvrpgnXixfxzX1W9h31rpNYgQvcT' />
+                        
+                        
+                            
+                            
+                                <div id="question_1">
+                                    <span>Did you watch the video? (No lying.)</span> <ul id="id_watched_video">
+<li><label for="id_watched_video_0"><input id="id_watched_video_0" name="watched_video" type="radio" value="no" /> No</label></li>
+<li><label for="id_watched_video_1"><input id="id_watched_video_1" name="watched_video" type="radio" value="yes" /> Yes</label></li>
+<li><label for="id_watched_video_2"><input id="id_watched_video_2" name="watched_video" type="radio" value="some" /> Some of it...</label></li>
+</ul>
+                                </div>
+                            
+                        
+                            
+                            
+                                <div id="question_2">
+                                    <span>When an individual has incentives that work against their professional responsibilities, this is often called a _______.</span> <ul id="id_q0">
+<li><label for="id_q0_0"><input id="id_q0_0" name="q0" type="radio" value="0" /> Free Market</label></li>
+<li><label for="id_q0_1"><input id="id_q0_1" name="q0" type="radio" value="1" /> Fundamental Error</label></li>
+<li><label for="id_q0_2"><input id="id_q0_2" name="q0" type="radio" value="2" /> Conflict of Interest     x</label></li>
+<li><label for="id_q0_3"><input id="id_q0_3" name="q0" type="radio" value="3" /> System Failure</label></li>
+</ul>
+                                </div>
+                            
+                        
+                            
+                            
+                                <div id="question_3">
+                                    <span>True or False: Conflicts of interest can be found frequently in society</span> <ul id="id_q1">
+<li><label for="id_q1_0"><input id="id_q1_0" name="q1" type="radio" value="0" /> True          x</label></li>
+<li><label for="id_q1_1"><input id="id_q1_1" name="q1" type="radio" value="1" /> False</label></li>
+</ul>
+                                </div>
+                            
+                        
+                            
+                            
+                                <div id="question_4">
+                                    <span>When a doctor is seeking the right treatment for a patient, which of these factors would most likely become a conflict of interest?</span> <ul id="id_q2">
+<li><label for="id_q2_0"><input id="id_q2_0" name="q2" type="radio" value="0" /> Patient&#39;s medical history</label></li>
+<li><label for="id_q2_1"><input id="id_q2_1" name="q2" type="radio" value="1" /> A medicine company sending a doctor on a nice business trip          x</label></li>
+<li><label for="id_q2_2"><input id="id_q2_2" name="q2" type="radio" value="2" /> Doctor&#39;s salary increasing with years in the business</label></li>
+<li><label for="id_q2_3"><input id="id_q2_3" name="q2" type="radio" value="3" /> Patient grew up in the same state as the doctor</label></li>
+</ul>
+                                </div>
+                            
+                        
+                            
+                            
+                                <div id="question_5">
+                                    <span>Which of these is a clear conflict of interest when someone is buying a home?</span> <ul id="id_q3">
+<li><label for="id_q3_0"><input id="id_q3_0" name="q3" type="radio" value="0" /> The real estate agent represents both the buyer and the seller            x</label></li>
+<li><label for="id_q3_1"><input id="id_q3_1" name="q3" type="radio" value="1" /> The buyers know the person selling the house personally</label></li>
+<li><label for="id_q3_2"><input id="id_q3_2" name="q3" type="radio" value="2" /> Two different real estate agents represent the buyer and the seller</label></li>
+<li><label for="id_q3_3"><input id="id_q3_3" name="q3" type="radio" value="3" /> The real estate agent for the buyer is also on the local school committee</label></li>
+</ul>
+                                </div>
+                            
+                        
+                            
+                            
+                                <div id="question_6">
+                                    <span>Which professor is likely to design the least challenging class? A professor promoted on..</span> <ul id="id_q4">
+<li><label for="id_q4_0"><input id="id_q4_0" name="q4" type="radio" value="0" /> the content of the syllabus</label></li>
+<li><label for="id_q4_1"><input id="id_q4_1" name="q4" type="radio" value="1" /> the opinions of the faculty</label></li>
+<li><label for="id_q4_2"><input id="id_q4_2" name="q4" type="radio" value="2" /> the knowledge of their field</label></li>
+<li><label for="id_q4_3"><input id="id_q4_3" name="q4" type="radio" value="3" /> the opinions of the students     x</label></li>
+</ul>
+                                </div>
+                            
+                        
+                            
+                            
+                                <div id="question_7">
+                                    <span>Which of these helps to reduce conflicts of interest?</span> <ul id="id_q5">
+<li><label for="id_q5_0"><input id="id_q5_0" name="q5" type="radio" value="0" /> Codes of Conduct</label></li>
+<li><label for="id_q5_1"><input id="id_q5_1" name="q5" type="radio" value="1" /> Respect customers or clients perspective</label></li>
+<li><label for="id_q5_2"><input id="id_q5_2" name="q5" type="radio" value="2" /> Consulting more-experienced or trustworthy people</label></li>
+<li><label for="id_q5_3"><input id="id_q5_3" name="q5" type="radio" value="3" /> All of the Above      x</label></li>
+</ul>
+                                </div>
+                            
+                        
+                            
+                            
+                                <div id="code">
+                                    <span>Enter your redemption code</span> <input id="id_redemption_code" maxlength="5" name="redemption_code" type="text" />
+                                </div>
+                            
+                        
+                    </form>
+				</div>
+				<!-- Display Code Form, Submit Code -->
+				<div id="step_code" class="step_display">
+					<form role="form" id="redemption_code">
+						<div class="form-group">
+							<label for="redemption_code_input">Enter Redemption Code</label>
+							<input type="text" class="form-control" id="redemption_code_input" placeholder="12345">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					</form>
+				</div>
+				<!-- Inform user that info has been submitted, wait for http response -->
+				<div id="step_results" class="step_display">
+
+				</div>
+			</div>
+			<!-- END Individual step display areas -->
+			<!-- Begin Hidden Submission Form -- This form is used to submit the data to the server at the end of the quiz. -->
+			<div>
+				<form id="quiz_submitter" action="validation.html" method="post">
+				</form>
+			</div>
+<!-- ========================  End Non-template Content =========================== -->
+			<script src="rsc/script/jquery-1.11.1.min.js"></script>
+			<script src="rsc/tbs/js/bootstrap.min.js"></script>
+			<script src="rsc/script/vid_quiz.js"></script>
+		</body>
+	</html>

@@ -5,6 +5,24 @@
     <title>Anti-Corruption University</title>
 </head>
 <body>
-    <a href="{% url 'learn' %}">Learn</a>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/xnRpMQvW_ow" frameborder="0" allowfullscreen></iframe>
+    <div id="step_quiz" class="step_display">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+                {{ field.errors }}
+                {% if not forloop.last %}
+                    <div id="question_{{ forloop.counter }}">
+                        <span>{{ field.label }}</span> {{ field }}
+                    </div>
+                {% else %}
+                    <div id="code">
+                        <span>{{ field.label }}</span> {{ field }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </form>
+    </div>
 </body>
 </html>

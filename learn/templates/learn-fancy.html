@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+	<html>
+            <meta charset="UTF-8" />
+            <title>ACU: Anti Corruption University</title>
+            <link rel="stylesheet" href="rsc/style/main.css" />
+			<link rel="stylesheet" href="rsc/tbs/css/bootstrap.min.css" />
+			<!-- See footer.html for including scripts. -->
+        </head>
+        <body>
+			<!-- BEGIN Twitter Bootstrap Nav Bar -->
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">LOGO!</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="about">About</a></li>
+							<li><a href="contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- END Twitter Bootstrap Nav Bar -->
+
+
+<!-- ======================== Begin Non-template Content ========================== -->
+
+            <!-- BEGIN Individual step display areas -->
+			<div id="content_display">
+				<!-- Display and Watch Video -->
+				<div id="step_video" class="step_display">
+					<div class="step_positioner">
+						<div id="player"></div>
+						<script src="http://www.youtube.com/player_api"></script>
+						<script>
+							// create youtube player
+							var player;
+							function onYouTubePlayerAPIReady() {
+								player = new YT.Player('player', {
+									height: '390',
+									width: '640',
+									videoId: '0Bmhjf0rKe8',
+									events: {
+										'onStateChange': function (event){
+											if(event.data === 0){ // 0 == Video Ended
+												videoComplete();
+											}
+										}
+									}
+								});
+							};
+						</script>
+					</div>
+				</div>
+				<!-- Display and Take Quiz -->
+				<div id="step_quiz" class="step_display">
+					<form method="post">
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        {% for field in form %}
+                            {{ field.errors }}
+                            {% if not forloop.last %}
+                                <div id="question_{{ forloop.counter }}">
+                                    <span>{{ field.label }}</span> {{ field }}
+                                </div>
+                            {% else %}
+                                <div id="code">
+                                    <span>{{ field.label }}</span> {{ field }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </form>
+				</div>
+				<!-- Display Code Form, Submit Code -->
+				<div id="step_code" class="step_display">
+					<form role="form" id="redemption_code">
+						<div class="form-group">
+							<label for="redemption_code_input">Enter Redemption Code</label>
+							<input type="text" class="form-control" id="redemption_code_input" placeholder="12345">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					</form>
+				</div>
+				<!-- Inform user that info has been submitted, wait for http response -->
+				<div id="step_results" class="step_display">
+
+				</div>
+			</div>
+			<!-- END Individual step display areas -->
+			<!-- Begin Hidden Submission Form -- This form is used to submit the data to the server at the end of the quiz. -->
+			<div>
+				<form id="quiz_submitter" action="validation.html" method="post">
+				</form>
+			</div>
+<!-- ========================  End Non-template Content =========================== -->
+			<script src="rsc/script/jquery-1.11.1.min.js"></script>
+			<script src="rsc/tbs/js/bootstrap.min.js"></script>
+			<script src="rsc/script/vid_quiz.js"></script>
+		</body>
+	</html>
