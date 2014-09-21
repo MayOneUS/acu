@@ -92,18 +92,5 @@ def learn(request):
 #         form = CodeRedeemForm()
 #         return render(request, 'redeem.html', dictionary={'form': form})
 
-
-class LearnView(FormView):
-    template_name = 'learn.html'
-    form_class = QuizForm
-    success_url = reverse_lazy('')
-
-
-# class RedeemView(FormView):
-#     template_name = 'redeem.html'
-#     form_class = CodeRedeemForm
-#     success_url = reverse_lazy('thanks')
-
-
 def thanks(request):
     return render(request, 'thanks.html')
