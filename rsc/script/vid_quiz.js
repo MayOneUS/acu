@@ -109,4 +109,3 @@ function finishQuiz() {
 };
 jQuery('#redemption_code').submit(submitQuiz);
 quiz.setup();
-videoComplete();
