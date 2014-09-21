@@ -32,3 +32,6 @@
 #quiz_question_display {
 	
 }
+#quiz_submitter {
+	display: none;
+}
