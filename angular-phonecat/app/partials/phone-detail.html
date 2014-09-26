@@ -1,0 +1,20 @@
+<div class="text-center">
+<youtube-video id="good-vid" video-url="anotherGoodOne" player-vars="playerVars"></youtube-video>
+</div>
+<div class="center-block">
+<ul ng-hide="hideQuiz" class="quiz">
+    <li ng-repeat="question in questions">
+    {{question.question}}
+        <ul>
+            <div ng-hide="wrong_answers[question.id]">Wrong!</div>
+
+            <li ng-repeat="answer in question.answers">
+                <input type="radio" ng-model='answers[question.id]' name="{{ question.id }}" value="{{ answer.id }}">
+                {{ answer.text }}
+            </li>
+        </ul>
+    </li>
+    <button type="submit" ng-click="validate_quiz()">Submit</button>
+</ul>
+</div>
+</div>

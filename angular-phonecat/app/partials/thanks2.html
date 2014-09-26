@@ -1,0 +1,5 @@
+<li ng-repeat="store in stores">
+    <input type="radio" ng-model="$parent.storeName" value="{{ store.name }}" name="thestore"> {{ store.name }}<br/>
+</li>
+
+<button type="submit" ng-click="SaveStorePreference()">Thanks!</button>

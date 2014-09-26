@@ -1,0 +1,19 @@
+<div id="thanks">
+    Thanks for watching. Out of appreciation we'd like to offer you a gift card to
+    one of the following online stores. Make sure you enter your email so we can
+    know where to send it!
+</div>
+
+Email:<input type="email" ng-model="email"/>
+<ul>
+    <li ng-repeat="store in stores">
+        <input type="radio" ng-model="$parent.storeName" value="{{ store.name }}" name="thestore"> {{ store.name }}<br/>
+
+        <div>{{ store.name }}</div>
+    </li>
+    <button type="submit" ng-click="SaveStorePreference()">Thanks!</button>
+</ul>
+
+or, pay it forward! Enter a friend's email who you want to see this video, and give them the gift card as incentive!
+Email:<input type="email" ng-model="emailforward"/>
+    <button type="submit" ng-click="payForward()">Pay it forward!</button>

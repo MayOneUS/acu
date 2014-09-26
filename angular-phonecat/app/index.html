@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="static/css/app.css">
+  <script src="static/bower_components/angular/angular.js"></script>
+  <script src="static/bower_components/angular-route/angular-route.js"></script>
+    <script src="static/bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
+    <script src="static/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="static/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="static/js/app.js"></script>
+  <script src="static/js/controllers.js"></script>
+  <script src="/static/js/filters.js"></script>
+</head>
+<body>
+{% csrf_token %}
+  <div ng-view></div>
+
+</body>
+</html>
