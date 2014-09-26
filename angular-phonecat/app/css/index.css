@@ -228,6 +228,10 @@ article {
   font-size: 0.8;
   color: #666;
 }
+.btn-cta:hover {
+    color:#FFF;
+    text-decoration: underline;
+}
 .btn-cta {
   background: transparent url('/static/images/btn-blog-cta.png') 0 0 no-repeat;
   width: 218px;

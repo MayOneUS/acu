@@ -149,7 +149,7 @@ footer {
       text-transform: uppercase;
     }
     .donate-wrap a.ir {
-      background: transparent url('/static/images/btn-donate.png') center center no-repeat;
+      background: transparent url('/static/images/donate.png') center center no-repeat;
       width: 289px;
       height: 47px;
       display: block;
