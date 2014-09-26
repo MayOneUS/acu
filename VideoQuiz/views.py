@@ -29,7 +29,8 @@ def Validate(request):
                 }
                 for question in questions]
             quiz = {'quiz': {'id': code.quiz_id},
-                    'questions': QandA}
+                    'questions': QandA,
+                    'youtube_url':code.quiz.video_url}
             return HttpResponse(json.dumps(quiz), status=200)
 
         except Code.DoesNotExist:

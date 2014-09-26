@@ -75,7 +75,6 @@ phonecatControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http',
     }]);
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http', '$cookies', '$location', "Data",
     function($scope, $routeParams, $http, $cookies, $location, Data) {
-	    $scope.anotherGoodOne = 'https://www.youtube.com/watch?v=18-xvIjH8T4';
 	    $scope.playerVars = {
 	        controls: 2,
 	        autoplay: 0
@@ -87,6 +86,8 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$h
         $scope.Data = Data;
         $scope.nottrue = true;
         console.log($scope.Data.getQuiz())
+        $scope.anotherGoodOne = $scope.Data.getQuiz().youtube_url;
+
         for(var i = 0; i < $scope.Data.getQuiz().questions.length; i++)
         {
             $scope.answers[$scope.Data.getQuiz().questions[i].id] = {};
