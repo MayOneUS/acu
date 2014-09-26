@@ -22,7 +22,7 @@ def Validate(request):
         try:
             code = Code.objects.get(code=token)
             print "hello!"
-            questions = code.quiz.question_set.all()
+            questions = code.quiz.question_set.all().order_by('id')
             QandA = [
                 {'question':question.question, 'id':question.id,
                       'answers': [{'text':answer.answer, 'id':answer.id} for answer in question.answer_set.all().order_by('id')]

@@ -132,6 +132,7 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$h
                 for(var k in $scope.wrong_answers) $scope.wrong_answers[k] = true;
                 for(var i = 0; i < data.length; i++) $scope.wrong_answers[data[i]] = false;
                 console.log($scope.wrong_answers)
+                $scope.wrongAnswer = true;
             });
         console.log(data)
     };

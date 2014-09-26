@@ -8,7 +8,7 @@
 <div class="center-block">
 <ul ng-hide="hideQuiz" class="quiz">
     <li ng-repeat="question in questions">
-    <h3>{{question.question}}            <span ng-hide="wrong_answers[question.id]">Oops! Try Again!</span>    </h3>
+    <h3>{{question.question}}            <span ng-hide="wrong_answers[question.id]" style='color:red;'>Oops! Try Again!</span>    </h3>
         <ul>
 
             <li ng-repeat="answer in question.answers">
@@ -17,7 +17,7 @@
             </li>
         </ul>
     </li>
-    <a class="btn btn-cta" ng-click="validate_quiz()">CHECK ANSWERS!</a>
+    <a class="btn btn-cta" ng-click="validate_quiz()"><span >CHECK ANSWERS!</span></a><span ng-hide="!wrongAnswer" style="color:red;padding-left:10px;">Some of your answers were incorrect, please review.</span>
 
 </ul>
 </div>
