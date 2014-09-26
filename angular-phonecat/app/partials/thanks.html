@@ -1,3 +1,5 @@
+<div class="text-center cross-stitched latest-news" style="padding-top:100px">
+
 <div id="thanks">
     Thanks for watching. Out of appreciation we'd like to offer you a gift card to
     one of the following online stores. Make sure you enter your email so we can
@@ -11,9 +13,13 @@ Email:<input type="email" ng-model="email"/>
 
         <div>{{ store.name }}</div>
     </li>
+    <a class="btn btn-cta" ng-click="SaveStorePreference()">Send my gift!</a>
+
     <button type="submit" ng-click="SaveStorePreference()">Thanks!</button>
 </ul>
 
 or, pay it forward! Enter a friend's email who you want to see this video, and give them the gift card as incentive!
 Email:<input type="email" ng-model="emailforward"/>
     <button type="submit" ng-click="payForward()">Pay it forward!</button>
+
+    </div>

@@ -7,8 +7,7 @@ var phonecatApp = angular.module('phonecatApp', [
   'phonecatControllers',
   'phonecatFilters',
   'youtube-embed',
-  'ngCookies',
-
+  'ngCookies'
 ]);
 
 phonecatApp.config(['$routeProvider',

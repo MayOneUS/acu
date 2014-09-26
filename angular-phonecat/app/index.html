@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/app.css">
     <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/index.css">
   <script src="static/bower_components/angular/angular.js"></script>
   <script src="static/bower_components/angular-route/angular-route.js"></script>
     <script src="static/bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
@@ -23,9 +24,6 @@
       <div class="navbar-header pull-right  hidden-xs hidden-sm">
         <div class="">
           <ul class="nav navbar-nav">
-            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us/" class="ir social facebook-share">Facebook</a></li>
-            <li><a href="https://twitter.com/home?status=Let%27s%20win%20our%20democracy%20back!%20Join%20the%20%23MaydayMovement%3A%20http%3A%2F%2Fmayday.us%20%20" class="ir social twitter-share">Twitter</a></li>
-            <li><a href="mailto:?subject=Help Reduce the influence of money in politics. &amp;body=The Mayday Political Action Committee has kick-started the money for the first essential step towards a Congress committed to fundamental reform by 2016. But we still need your help to spread the word. Will you join me by going to https://mayday.us?" class="ir social email-share">Email</a></li>
           </ul>
         </div>
       </div>
@@ -37,13 +35,22 @@
           <div class="menu-text">MENU</div>
         </button>
       </div>
+      <div class="collapse navbar-collapse" id="">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" >Anti-Corruption University <i class="fa fa-caret-down"></i></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="header-bg-1"></div>
   <div class="header-bg-2"></div>
 </header>
+<section class="cross-stiched latest-news">
 {% csrf_token %}
   <div ng-view></div>
+</section>
 <footer>
   <div class="donate-wrap">
     <hr/>
