@@ -56,9 +56,9 @@ def quizcheck(request):
     code.save();
     return HttpResponse('valid')
 
-
-class StartedWatching(View):
-    def post(self, request):
+@csrf_exempt
+def StartedWatching(request):
+    if request.method == 'POST':
         token = request.POST.get('token', '')
         try:
             code = Code.objects.get(code=token)

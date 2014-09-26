@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title>Google Phone Gallery</title>
   <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="static/css/app.css">
+    <link rel="stylesheet" href="static/css/app.css">
+    <link rel="stylesheet" href="static/css/common.css">
   <script src="static/bower_components/angular/angular.js"></script>
   <script src="static/bower_components/angular-route/angular-route.js"></script>
     <script src="static/bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
@@ -15,8 +16,83 @@
   <script src="/static/js/filters.js"></script>
 </head>
 <body>
+<header class="navbar navbar-fixed-top">
+  <div class="container" style="position:relative">
+    <a class="navbar-brand ir" href="/">MAYDAY.US</a>
+    <div class="row navbar-social"  style="">
+      <div class="navbar-header pull-right  hidden-xs hidden-sm">
+        <div class="">
+          <ul class="nav navbar-nav">
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://mayday.us/" class="ir social facebook-share">Facebook</a></li>
+            <li><a href="https://twitter.com/home?status=Let%27s%20win%20our%20democracy%20back!%20Join%20the%20%23MaydayMovement%3A%20http%3A%2F%2Fmayday.us%20%20" class="ir social twitter-share">Twitter</a></li>
+            <li><a href="mailto:?subject=Help Reduce the influence of money in politics. &amp;body=The Mayday Political Action Committee has kick-started the money for the first essential step towards a Congress committed to fundamental reform by 2016. But we still need your help to spread the word. Will you join me by going to https://mayday.us?" class="ir social email-share">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row navbar-primary" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <div class="menu-text">MENU</div>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="header-bg-1"></div>
+  <div class="header-bg-2"></div>
+</header>
 {% csrf_token %}
   <div ng-view></div>
+<footer>
+  <div class="donate-wrap">
+    <hr/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="/newpledge/" title="" class="ir">Donate to Mayday PAC</a>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="safeharbor">
+          <p>
+            Paid for by Mayday PAC. <br/>
+            Not authorized by any candidate or candidate's committee.<br/>
+            MAYDAY.US
+          </p>
+        </div>
+        <p class="copyright">&copy; 2014 Mayday PAC, Some rights reserved. <a href="http://creativecommons.org/licenses/by-sa/4.0">
+			<img src="/static/images/80x15.png"></p>
+      </div>
+      <div class="col-md-4">
+        <!-- <a href="#" class="ir social-link youtube" title="Youtube Page">Youtube Page</a> -->
+        <a href="https://twitter.com/MAYDAYUS" class="ir social-link twitter" title="Twitter Page">Twitter Page</a>
+        <a href="https://www.facebook.com/groups/282646648577039/" class="ir social-link facebook" title="Facebook Page">Facebook Page</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
+<div style="display: none">
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 968755289;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+  </script>
+
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+
+  <noscript>
+    <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/968755289/?value=0&amp;guid=ON&amp;script=0"/>
+  </noscript>
+</div>
 </body>
 </html>

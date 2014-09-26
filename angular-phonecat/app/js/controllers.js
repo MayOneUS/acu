@@ -41,6 +41,8 @@ phonecatControllers.controller('SelectGiftCtrl', ['$scope', '$routeParams', '$ht
     function($scope, $routeParams, $http) {
         console.log('in the select gift control')
     }]);
+
+
 phonecatControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$location',
     function($scope, $routeParams, $http, $location) {
         $http({method: 'GET', url: '/ListStores/'}).
@@ -98,7 +100,15 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$h
 	    $scope.$on('youtube.player.ended', function($event, player) {
 	        console.log(player);
             $scope.hideQuiz = false;
+            var data = {token:$routeParams.token}
+            $http({method: 'POST', url: '/finished_watching/', data:data}).
+                success(function(){})
 	    });
+        $scope.$on('youtube.player.playing', function($event, player) {
+            var data = {token:$routeParams.token}
+            $http({method: 'POST', url: '/started_watching/', data:data}).
+                success(function(){})
+        })
 
     $scope.validate_quiz = function() {
         console.log($cookies.csrf_token)

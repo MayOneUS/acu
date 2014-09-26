@@ -1,0 +1,263 @@
+html,body {
+  font-family: Helvetica,Arial,sans-serif;
+  background: #000;
+  font-size:16px;
+}
+body {
+  padding-top: 20px;
+}
+.default-body {
+  padding-top: 70px;
+}
+#candidate {
+  padding-top: 90px;
+}
+
+/* START HEADER */
+.navbar-toggle .icon-bar {
+  background-color: #000
+}
+.navbar-brand {
+  background: transparent url('/static/images/mayday-pac-logo.png') no-repeat 0 0;
+  background-size: cover;
+  width: 272px;
+  height: 87px;
+  position: absolute;
+  z-index: 10000;
+}
+.navbar-social {
+  z-index: 100;
+  position: fixed;
+  right: 15px
+}
+  .navbar-social .navbar-nav>li>a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .navbar-social a.social {
+    width: 106px;
+    height: 26px;
+    background-position: 0 -10px;
+  }
+    .navbar-social a.social.facebook-share {background-image: url('/static/images/share-facebook.png') }
+    .navbar-social a.social.twitter-share {background-image: url('/static/images/share-twitter.png') }
+    .navbar-social a.social.email-share {background-image: url('/static/images/share-email.png') }
+
+.navbar-primary {
+  padding-left: 272px;
+  position: absolute;
+  z-index: 100;
+  top: 26px;
+  width: 100%;
+}
+  .navbar-primary .navbar-nav{
+    padding-left:10px;
+  }
+  .navbar-primary .navbar-nav>li:after{content:""; background: black; position: absolute; bottom: 14px; right: 0; height: 16px; width: 1px;}
+  .navbar-primary .navbar-nav>li:last-child:after{width:0px}
+
+  .navbar-primary .navbar-nav>li>a {
+    padding: 13px 20px;
+    text-transform: uppercase;
+    color: #444;
+    font-weight: 400;
+    letter-spacing:90%;
+    height: 45px;
+  }
+  .navbar-primary .navbar-nav .fa.fa-caret-down{
+    padding-left:5px;
+  }
+
+  .navbar-toggle .menu-text {
+    text-transform: uppercase;
+    color: #444;
+    font-weight: 700;
+    letter-spacing:90%
+  }
+  .navbar-primary .in .navbar-nav>li {
+    background-color: rgba(255,255,255,0.8);
+  }
+  .navbar-primary .navbar-nav>li>a small {
+    vertical-align: top;
+    padding-left:5px;
+    border-right: solid 1px #333;
+    padding-right:20px ;
+  }
+  .dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+  .dropdown-menu>li>a {
+    padding: 10px 20px;
+  }
+  .dropdown-menu>li>a:before {
+    content: '» ';
+  }
+.header-bg-1, .header-bg-2 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+  .header-bg-1 {
+    background: #000;
+    height: 26px;
+    top: 0
+  }
+  .header-bg-2 {
+    background: rgba(255,255,255,0.9);
+    height: 45px;
+    top: 26px;
+    border-bottom:solid 1px #cccccc;
+  }
+
+.navbar-primary a {
+  font-family:'Roboto', Helvetica;
+  font-weight:100;
+}
+.navbar-nav a {
+  font-family:'Roboto', sans-serif;
+  font-weight:100;
+  letter-spacing: .1em;
+}
+
+
+
+
+/* FOOTER SECTION */
+footer {
+  color: #999;
+  background-color:black;
+}
+  .donate-wrap {
+    background: #444;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0 0 20px;
+  }
+    .donate-wrap hr {
+      border-color: #666;
+      margin:0;
+    }
+    .donate-wrap .container {
+      padding-top: 20px;
+      padding-bottom: 20px
+    }
+    .donate-wrap a {
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .donate-wrap a.ir {
+      background: transparent url('/static/images/btn-donate.png') center center no-repeat;
+      width: 289px;
+      height: 47px;
+      display: block;
+      margin: 0 auto;
+    }
+  .social-link {
+    float: right;
+    width: 55px;
+    height: 54px;
+    background: transparent 0 0 no-repeat;
+    margin-left: 10px;
+  }
+    .social-link.facebook {
+      background-image: url('/static/images/link-facebook.png');
+    }
+    .social-link.twitter {
+      background-image: url('/static/images/link-twitter.png');
+    }
+  .safeharbor{
+    font: normal 1em/1.4 'Merriweather', Georgia, "Times New Roman", Times, serif;
+    display: inline-block;
+    color: #aaa;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 10px 0 10px;
+    border: 2px solid #aaa;
+    font-variant: small-caps;
+    margin-bottom:10px;
+  }
+/* END FOOTER SECTION */
+
+.ir/* Image replacement: header social share, footer FB/Twitter */ {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  text-indent: -9999px
+}
+.text-red {
+  color: #cc3333 !important;
+}
+.float-right{
+  float:right !important;
+}
+.float-left{
+  float:left !important;
+}
+.cross-stitched {
+  width: 100%;
+  background: transparent url('/static/images/bg-crossstitch.jpg');
+  padding-bottom: 60px
+}
+
+/* COLLAPSE THE MENU EARLY */
+@media (max-width: 1200px) {
+  .navbar-primary .navbar-header {
+      float: none;
+  }
+  .navbar-primary .navbar-left,  .navbar-primary .navbar-right {
+      float: none !important;
+  }
+  .navbar-primary .navbar-toggle {
+      display: block;
+  }
+  .navbar-primary .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-primary .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-primary .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-primary .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-primary .navbar-nav>li {
+      float: none;
+  }
+  .navbar-primary .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .navbar-primary .collapse.in{
+    display:block !important;
+  }
+  .fa.fa-caret-down {
+      border:0;
+  }
+}
+
+/* For iPad and smaller screens */
+@media (max-width: 768px) {
+  .navbar-primary {
+    padding-left:200px;
+  }
+}
+
+/* For iPhone and smaller screens */
+@media (max-width: 320px) {
+    .navbar-primary {
+      padding-left:100px;
+    }
+    .navbar-brand {
+      width: 222px;
+      height: 70px;
+      top:10px;
+    }
+}
