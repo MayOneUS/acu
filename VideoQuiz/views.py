@@ -25,7 +25,7 @@ def Validate(request):
             questions = code.quiz.question_set.all()
             QandA = [
                 {'question':question.question, 'id':question.id,
-                      'answers': [{'text':answer.answer, 'id':answer.id} for answer in question.answer_set.all()]
+                      'answers': [{'text':answer.answer, 'id':answer.id} for answer in question.answer_set.all().order_by('id')]
                 }
                 for question in questions]
             quiz = {'quiz': {'id': code.quiz_id},
