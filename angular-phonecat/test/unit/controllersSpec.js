@@ -3,7 +3,7 @@
 /* jasmine specs for controllers go here */
 describe('PhoneCat controllers', function() {
 
-  beforeEach(module('phonecatApp'));
+  beforeEach(module('acuApp'));
 
   describe('PhoneListCtrl', function(){
     var scope, ctrl, $httpBackend;

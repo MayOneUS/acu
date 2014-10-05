@@ -25,25 +25,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/AntiCorruptionUniversity/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="88" column="24" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.2877095" vertical-offset="1217" max-vertical-offset="1575">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/angular-phonecat/app/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="24" selection-start="1181" selection-end="1181" vertical-scroll-proportion="-2.82" vertical-offset="204" max-vertical-offset="1665">
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state line="56" column="27" selection-start="2209" selection-end="2209" vertical-scroll-proportion="1.2103746" vertical-offset="0" max-vertical-offset="1665">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -51,7 +37,7 @@
           <file leaf-file-name="common.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-phonecat/app/css/common.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="259" column="19" selection-start="5606" selection-end="5606" vertical-scroll-proportion="-15.461538" vertical-offset="3483" max-vertical-offset="4020">
+                <state line="259" column="19" selection-start="5606" selection-end="5606" vertical-scroll-proportion="0.0" vertical-offset="3351" max-vertical-offset="4020">
                   <folding />
                 </state>
               </provider>
@@ -66,28 +52,28 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="csrf.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file:///Library/Python/2.7/site-packages/django/views/decorators/csrf.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="56" column="0" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0" vertical-offset="562" max-vertical-offset="945">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/AntiCorruptionUniversity/wsgi.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="300">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-phonecat/app/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="12" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="645">
+                <state line="7" column="3" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="645">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular-phonecat/bower.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="5" column="18" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="315">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="filters.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular-phonecat/app/js/filters.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="16" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="225">
                   <folding />
                 </state>
               </provider>
@@ -96,7 +82,7 @@
           <file leaf-file-name="select.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/select.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="210">
+                <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="210">
                   <folding />
                 </state>
               </provider>
@@ -105,10 +91,8 @@
           <file leaf-file-name="code-page.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/code-page.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="68" selection-start="394" selection-end="394" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="270">
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
+                <state line="2" column="40" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="270">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -116,10 +100,17 @@
           <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/VideoQuiz/admin.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="0" selection-start="451" selection-end="452" vertical-scroll-proportion="-11.4" vertical-offset="0" max-vertical-offset="645">
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                  </folding>
+                <state line="19" column="0" selection-start="451" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="645">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/VideoQuiz/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="86" column="49" selection-start="2736" selection-end="2736" vertical-scroll-proportion="0.0" vertical-offset="1290" max-vertical-offset="2310">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -131,7 +122,16 @@
           <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular-phonecat/app/js/controllers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="119" column="39" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.0" vertical-offset="1634" max-vertical-offset="2190">
+                <state line="29" column="36" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2175">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular-phonecat/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="5" column="52" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="630">
                   <folding />
                 </state>
               </provider>
@@ -140,61 +140,26 @@
           <file leaf-file-name="importlib.py" pinned="false" current="false" current-in-tab="false">
             <entry file="file:///Library/Python/2.7/site-packages/django/utils/importlib.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="39" column="0" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="675">
+                <state line="39" column="0" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="705">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/VideoQuiz/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="65" selection-start="763" selection-end="763" vertical-scroll-proportion="-4.2" vertical-offset="255" max-vertical-offset="2175">
-                  <folding>
-                    <element signature="e#0#55#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/AntiCorruptionUniversity/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="28" selection-start="544" selection-end="561" vertical-scroll-proportion="-2.68" vertical-offset="188" max-vertical-offset="690">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="thanks.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="thanks.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/thanks.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="57" selection-start="449" selection-end="449" vertical-scroll-proportion="-5.625" vertical-offset="30" max-vertical-offset="435">
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="thanks2.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/thanks2.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="49" selection-start="33" selection-end="150" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="165">
+                <state line="16" column="10" selection-start="625" selection-end="625" vertical-scroll-proportion="0.34582132" vertical-offset="0" max-vertical-offset="694">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="phone-detail.html" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/phone-detail.html">
+          <file leaf-file-name="video-and-quiz.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/video-and-quiz.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="151" selection-start="913" selection-end="913" vertical-scroll-proportion="0.7460733" vertical-offset="0" max-vertical-offset="465">
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#0;n#h3#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
+                <state line="10" column="54" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="465">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -219,15 +184,17 @@
         <option value="$PROJECT_DIR$/angular-phonecat/app/partials/thanks2.html" />
         <option value="$PROJECT_DIR$/AntiCorruptionUniversity/urls.py" />
         <option value="$PROJECT_DIR$/angular-phonecat/app/js/app.js" />
-        <option value="$PROJECT_DIR$/angular-phonecat/app/partials/code-page.html" />
-        <option value="$PROJECT_DIR$/angular-phonecat/app/index.html" />
-        <option value="$PROJECT_DIR$/angular-phonecat/app/partials/thanks.html" />
         <option value="$PROJECT_DIR$/angular-phonecat/app/css/common.css" />
         <option value="$PROJECT_DIR$/angular-phonecat/app/css/index.css" />
-        <option value="$PROJECT_DIR$/VideoQuiz/views.py" />
-        <option value="$PROJECT_DIR$/angular-phonecat/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/angular-phonecat/app/partials/phone-detail.html" />
         <option value="$PROJECT_DIR$/AntiCorruptionUniversity/settings.py" />
+        <option value="$PROJECT_DIR$/angular-phonecat/package.json" />
+        <option value="$PROJECT_DIR$/angular-phonecat/app/index.html" />
+        <option value="$PROJECT_DIR$/angular-phonecat/bower.json" />
+        <option value="$PROJECT_DIR$/angular-phonecat/app/partials/code-page.html" />
+        <option value="$PROJECT_DIR$/angular-phonecat/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/VideoQuiz/views.py" />
+        <option value="$PROJECT_DIR$/angular-phonecat/app/partials/thanks.html" />
       </list>
     </option>
   </component>
@@ -359,28 +326,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="angular-phonecat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AntiCorruptionUniversity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AntiCorruptionUniversity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="VideoQuiz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -404,7 +349,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -504,27 +449,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AntiCorruptionUniversity" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -550,7 +475,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AntiCorruptionUniversity" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -641,21 +586,21 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20958512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39897698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21244635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39897698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -674,21 +619,86 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/angular-phonecat/app/js/controllers.js</url>
-          <line>95</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/VideoQuiz/views.py</url>
-          <line>110</line>
-          <option name="timeStamp" value="11" />
+          <line>122</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="27" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="259" column="19" selection-start="5606" selection-end="5606" vertical-scroll-proportion="0.0" vertical-offset="3351" max-vertical-offset="4020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="240" column="13" selection-start="5321" selection-end="5321" vertical-scroll-proportion="0.0" vertical-offset="3320" max-vertical-offset="5040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="3" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/js/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="16" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/code-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="40" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoQuiz/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="451" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoQuiz/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="49" selection-start="2736" selection-end="2736" vertical-scroll-proportion="0.0" vertical-offset="1290" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AntiCorruptionUniversity/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="29" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1335">
@@ -708,108 +718,68 @@
     <entry file="file://$PROJECT_DIR$/VideoQuiz/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="0" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1005">
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VideoQuiz/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="720">
-          <folding />
-        </state>
+        <state line="37" column="0" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VideoQuiz/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="4" column="7" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="4672" selection-end="4672" vertical-scroll-proportion="0.0" vertical-offset="1631" max-vertical-offset="3105">
-          <folding />
-        </state>
+        <state line="132" column="0" selection-start="4672" selection-end="4672" vertical-scroll-proportion="0.0" vertical-offset="1631" max-vertical-offset="3105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="57" selection-end="57" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="4" column="7" selection-start="57" selection-end="57" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="0" selection-start="5118" selection-end="5118" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="4185">
-          <folding />
-        </state>
+        <state line="122" column="0" selection-start="5118" selection-end="5118" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="4185" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VideoQuiz/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/db/models/fields/related.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="0" selection-start="13649" selection-end="13649" vertical-scroll-proportion="0.0" vertical-offset="4178" max-vertical-offset="23025">
-          <folding />
-        </state>
+        <state line="303" column="0" selection-start="13649" selection-end="13649" vertical-scroll-proportion="0.0" vertical-offset="4178" max-vertical-offset="23025" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/dispatch/dispatcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="24" selection-start="6556" selection-end="6556" vertical-scroll-proportion="0.0" vertical-offset="2486" max-vertical-offset="4620">
-          <folding />
-        </state>
+        <state line="186" column="24" selection-start="6556" selection-end="6556" vertical-scroll-proportion="0.0" vertical-offset="2486" max-vertical-offset="4620" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VideoQuiz/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.0" vertical-offset="707" max-vertical-offset="1215">
-          <folding />
-        </state>
+        <state line="66" column="0" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.0" vertical-offset="707" max-vertical-offset="1215" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/selectgift.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="57" selection-start="158" selection-end="158" vertical-scroll-proportion="0.072463766" vertical-offset="0" max-vertical-offset="414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/thanks2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="49" selection-start="33" selection-end="150" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="165">
-          <folding />
-        </state>
+        <state line="2" column="57" selection-start="158" selection-end="158" vertical-scroll-proportion="0.072463766" vertical-offset="0" max-vertical-offset="414" />
       </provider>
     </entry>
     <entry file="file:///Library/Python/2.7/site-packages/django/views/decorators/csrf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0" vertical-offset="562" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/django/utils/importlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="675">
-          <folding />
-        </state>
+        <state line="56" column="0" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0" vertical-offset="562" max-vertical-offset="945" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AntiCorruptionUniversity/urls.py">
@@ -821,59 +791,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntiCorruptionUniversity/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="383">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="383" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoQuiz/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="451" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AntiCorruptionUniversity/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="23" selection-start="2387" selection-end="2387" vertical-scroll-proportion="-21.4" vertical-offset="890" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="259" column="19" selection-start="5606" selection-end="5606" vertical-scroll-proportion="0.0" vertical-offset="3351" max-vertical-offset="4020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/js/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="16" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-phonecat/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="645">
+        <state line="7" column="3" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/select.html">
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="210">
+        <state line="5" column="18" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="315">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/code-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="68" selection-start="394" selection-end="394" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="270">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VideoQuiz/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="451" selection-end="452" vertical-scroll-proportion="-11.4" vertical-offset="0" max-vertical-offset="645">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="19" selection-start="5606" selection-end="5606" vertical-scroll-proportion="-15.461538" vertical-offset="3483" max-vertical-offset="4020">
+        <state line="2" column="40" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="270">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/index.html">
+    <entry file="file://$PROJECT_DIR$/VideoQuiz/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="1181" selection-end="1181" vertical-scroll-proportion="-2.82" vertical-offset="204" max-vertical-offset="1665">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="86" column="49" selection-start="2736" selection-end="2736" vertical-scroll-proportion="0.0" vertical-offset="1290" max-vertical-offset="2310">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -884,45 +864,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/thanks.html">
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="57" selection-start="449" selection-end="449" vertical-scroll-proportion="-5.625" vertical-offset="30" max-vertical-offset="435">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VideoQuiz/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="65" selection-start="763" selection-end="763" vertical-scroll-proportion="-4.2" vertical-offset="255" max-vertical-offset="2175">
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+        <state line="56" column="27" selection-start="2209" selection-end="2209" vertical-scroll-proportion="1.2103746" vertical-offset="0" max-vertical-offset="1665">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-phonecat/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="39" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.0" vertical-offset="1634" max-vertical-offset="2190">
+        <state line="29" column="36" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2175">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/phone-detail.html">
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="151" selection-start="913" selection-end="913" vertical-scroll-proportion="0.7460733" vertical-offset="0" max-vertical-offset="465">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="5" column="52" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="630">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AntiCorruptionUniversity/settings.py">
+    <entry file="file:///Library/Python/2.7/site-packages/django/utils/importlib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="24" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.2877095" vertical-offset="1217" max-vertical-offset="1575">
+        <state line="39" column="0" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/video-and-quiz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="54" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-phonecat/app/partials/thanks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="10" selection-start="625" selection-end="625" vertical-scroll-proportion="0.34582132" vertical-offset="0" max-vertical-offset="694">
           <folding />
         </state>
       </provider>

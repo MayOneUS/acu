@@ -2,9 +2,9 @@
 
 /* Controllers */
 
-var phonecatControllers = angular.module('phonecatControllers', []);
+var acuControllers = angular.module('acuControllers', []);
 
-phonecatApp.factory('Data', function() {
+acuApp.factory('Data', function() {
     var quiz = { Quiz: ''}
     return {
         getQuiz: function() {
@@ -17,16 +17,20 @@ phonecatApp.factory('Data', function() {
     }
 );
 
-phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Data',
+acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Data',
   function($scope, $http, $location, Data) {
       $scope.Data = Data;
       $scope.answers = {};
       $scope.validCode = true;
     $scope.orderProp = 'age';
-
+    $scope.alreadyUsed = true;
     $scope.testCode = function(token) {
     $http({method: 'GET', url: '/validate', params:{'token':token}}).
         success(function(data, status, headers, config) {
+            if('alreadyUsed' in data){
+                $scope.alreadyUsed = false;
+                return;
+            }
             $scope.Data.setQuiz(data);
             console.log(data)
             $location.path('/video/' + token);
@@ -37,13 +41,13 @@ phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location',
     }
 
   }]);
-phonecatControllers.controller('SelectGiftCtrl', ['$scope', '$routeParams', '$http',
+acuControllers.controller('SelectGiftCtrl', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
         console.log('in the select gift control')
     }]);
 
 
-phonecatControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$location',
+acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$location',
     function($scope, $routeParams, $http, $location) {
         $http({method: 'GET', url: '/ListStores/'}).
             success(function(data) {
@@ -73,7 +77,7 @@ phonecatControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http',
             });
         };
     }]);
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http', '$cookies', '$location', "Data",
+acuControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http', '$cookies', '$location', "Data",
     function($scope, $routeParams, $http, $cookies, $location, Data) {
 	    $scope.playerVars = {
 	        controls: 2,
@@ -85,7 +89,6 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$h
         $scope.wrong_answers = {};
         $scope.Data = Data;
         $scope.nottrue = true;
-        console.log($scope.Data.getQuiz())
         $scope.anotherGoodOne = $scope.Data.getQuiz().youtube_url;
 
         for(var i = 0; i < $scope.Data.getQuiz().questions.length; i++)
@@ -93,13 +96,9 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$h
             $scope.answers[$scope.Data.getQuiz().questions[i].id] = {};
             $scope.wrong_answers[$scope.Data.getQuiz().questions[i].id] = true;
         }
-        console.log($scope.wrong_answers)
-        console.log('logging quiz')
-        console.log(Data.getQuiz())
 	    $scope.questions = $scope.Data.getQuiz().questions;
 
 	    $scope.$on('youtube.player.ended', function($event, player) {
-	        console.log(player);
             $scope.hideQuiz = false;
             var data = {token:$routeParams.token}
             $http({method: 'POST', url: '/finished_watching/', data:data}).

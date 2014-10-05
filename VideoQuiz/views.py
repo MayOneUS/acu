@@ -21,7 +21,11 @@ def Validate(request):
             return HttpResponse(status=400)
         try:
             code = Code.objects.get(code=token)
-            print "hello!"
+            try:
+                storeid = code.store.id
+                return HttpResponse(json.dumps({'alreadyUsed':True}), status=200)
+            except:
+                pass
             questions = code.quiz.question_set.all().order_by('id')
             QandA = [
                 {'question':question.question, 'id':question.id,
@@ -44,6 +48,7 @@ def quizcheck(request):
     try:
         token = body.get('token', '')
         code = Code.objects.get(code=token)
+
     except Code.DoesNotExist:
         return HttpResponse(status=400)
     print request.body
@@ -57,11 +62,13 @@ def quizcheck(request):
     code.save();
     return HttpResponse('valid')
 
+
 @csrf_exempt
 def StartedWatching(request):
     if request.method == 'POST':
-        token = request.POST.get('token', '')
         try:
+            body = json.loads(request.body)
+            token = body.get('token', '')
             code = Code.objects.get(code=token)
             code.started_watching = datetime.now()
             code.save()
@@ -70,10 +77,12 @@ def StartedWatching(request):
             return HttpResponse(status=400)
 
 
-class FinishedWatching(View):
-    def post(self, request):
-        token = request.POST.get('token', '')
+@csrf_exempt
+def FinishedWatching(request):
+    if request.method == 'POST':
         try:
+            body = json.loads(request.body)
+            token = body.get('token', '')
             code = Code.objects.get(code=token)
             code.finished_watching = datetime.now()
             code.save()
@@ -105,8 +114,8 @@ def ListStores(request):
     stores = [{'name':store.name, 'img_url':store.image_url} for store in stores]
     return HttpResponse(json.dumps(stores))
 
-@csrf_exempt
 
+@csrf_exempt
 def SaveStoreSelection(request):
     body = json.loads(request.body)
     code = body.get('token', '')

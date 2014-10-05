@@ -8,11 +8,13 @@
 
 Email:<input type="email" ng-model="email"/>
 <ul>
-    <li ng-repeat="store in stores">
-        <input type="radio" ng-model="$parent.storeName" value="{{ store.name }}" name="thestore"> {{ store.name }}<br/>
+    <div class="row">
+    <div class="span8" ng-repeat="store in stores">
+        <input type="radio" ng-model="$parent.storeName" value="{{ store.name }}" name="thestore">
 
-        <div>{{ store.name }}</div>
-    </li>
+        <img src="{{ store.img_url }}" style="height:200px; width:300px"/>
+    </div>
+    </div>
     <a class="btn btn-cta" ng-click="SaveStorePreference()">Send my gift!</a>
 
 </ul>

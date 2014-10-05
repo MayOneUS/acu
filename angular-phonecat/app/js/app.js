@@ -2,15 +2,15 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
+var acuApp = angular.module('acuApp', [
   'ngRoute',
-  'phonecatControllers',
+  'acuControllers',
   'phonecatFilters',
   'youtube-embed',
   'ngCookies'
 ]);
 
-phonecatApp.config(['$routeProvider',
+acuApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
@@ -18,7 +18,7 @@ phonecatApp.config(['$routeProvider',
         controller: 'PhoneListCtrl'
       }).
       when('/video/:token', {
-        templateUrl: 'static/partials/phone-detail.html',
+        templateUrl: 'static/partials/video-and-quiz.html',
         controller: 'PhoneDetailCtrl'
       }).
       when('/thanks/:token', {
