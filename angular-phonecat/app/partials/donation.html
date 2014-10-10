@@ -8,8 +8,8 @@
 
 <ul>
     <div class="row">
-    <select>
-        <option ng-repeat="store in stores">
+    <select ng-model="$parent.storeName">
+        <option ng-repeat="store in stores" value="{{ store.name }}">
             {{ store.name }}
         </option>
     </select>
