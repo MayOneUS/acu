@@ -45,3 +45,7 @@ Store.objects.create(name="Ebay", image_url="/static/images/giftcardimages/ebay.
 Store.objects.create(name="Best Buy", image_url="/static/images/giftcardimages/bestbuy.jpeg")
 Store.objects.create(name="Amazon", image_url="/static/images/giftcardimages/amazon.jpeg")
 Store.objects.create(name="Kohl's", image_url="/static/images/giftcardimages/Kohls-Gift-Card.png")
+
+
+james = Voter.objects.create(firstName='james', lastName='madison', address='america')
+code = Code.objects.create(code='testcode', voter=james, quiz=quiz)
