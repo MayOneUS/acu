@@ -6,21 +6,15 @@
     know where to send it!
 </div>
 
-Email:<input type="email" ng-model="email"/>
 <ul>
     <div class="row">
-    <div class="span8" ng-repeat="store in stores">
-        <input type="radio" ng-model="$parent.storeName" value="{{ store.name }}" name="thestore">
-
-        <img src="{{ store.img_url }}" style="height:200px; width:300px"/>
+    <select>
+        <option ng-repeat="store in stores">
+            {{ store.name }}
+        </option>
+    </select>
     </div>
-    </div>
-    <a class="btn btn-cta" ng-click="SaveStorePreference()">Send my gift!</a>
+    <a class="btn btn-cta" ng-click="SaveStorePreference()">Send my donation!</a>
 
 </ul>
-
-<p>or, pay it forward! Enter a friend's email who you want to see this video, and give them the gift card as incentive!</p>
-Email:<input type="email" ng-model="emailforward"/>
-    <a class="btn btn-cta" ng-click="payForward()">Pay it forward!</a>
-
     </div>
