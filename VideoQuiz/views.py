@@ -60,7 +60,7 @@ def quizcheck(request):
 
     code.quiz_complete = True;
     code.save();
-    return HttpResponse('valid')
+    return HttpResponse(json.dumps({'charity':code.charity}))
 
 
 @csrf_exempt
@@ -109,8 +109,14 @@ def SelectGift(request):
     return HttpResponse()
 
 
-def ListStores(request):
-    stores = Store.objects.all()
+def ListStores(request, token):
+    try:
+        code = Code.objects.get(code=token)
+    except:
+        return HttpResponse(status=400)
+
+    stores = Store.objects.filter(charity=True)
+
     stores = [{'name':store.name, 'img_url':store.image_url} for store in stores]
     return HttpResponse(json.dumps(stores))
 
@@ -133,7 +139,8 @@ def SaveStoreSelection(request):
         return HttpResponse("already has a store!", status=200)
     except:
         code.store = store
-        code.chosen_email = email
+        if not code.charity:
+            code.chosen_email = email
         code.save()
         return HttpResponse(status=200)
 

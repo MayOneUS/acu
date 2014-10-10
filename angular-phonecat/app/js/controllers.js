@@ -49,7 +49,7 @@ acuControllers.controller('SelectGiftCtrl', ['$scope', '$routeParams', '$http',
 
 acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$location',
     function($scope, $routeParams, $http, $location) {
-        $http({method: 'GET', url: '/ListStores/'}).
+        $http({method: 'GET', url: '/ListStores/' + $routeParams.token}).
             success(function(data) {
                 $scope.stores = data;
             })
@@ -77,6 +77,9 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
             });
         };
     }]);
+
+
+
 acuControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http', '$cookies', '$location', "Data",
     function($scope, $routeParams, $http, $cookies, $location, Data) {
 	    $scope.playerVars = {
@@ -118,9 +121,17 @@ acuControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
 
         $http({method: 'POST', url: '/ValidateQuiz/', data:{'data':data}}).
             success(function(data, status, headers, config) {
-               console.log('success!');
+                console.log('success!');
+                console.log(data);
                 for(var k in $scope.wrong_answers) $scope.wrong_answers[k] = true;
-                $location.path('/thanks/' + $scope.token);
+
+                if(data['charity'] == true)
+                {
+                    $location.path('/donation/' + $scope.token)
+                }
+                else {
+                    $location.path('/thanks/' + $scope.token);
+                }
 
             }).
             error(function(data, status, headers, config) {

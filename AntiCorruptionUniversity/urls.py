@@ -30,7 +30,7 @@ urlpatterns = patterns('',
         'VideoQuiz.views.SelectGift',
         name='select-gift'),
 
-    url(r'^ListStores/$',
+    url(r'^ListStores/(?P<token>[a-zA-Z].+)/$',
         'VideoQuiz.views.ListStores',
         name='list-stores'),
 

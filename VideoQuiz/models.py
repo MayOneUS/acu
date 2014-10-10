@@ -32,6 +32,7 @@ class Quiz(models.Model):
 class Store(models.Model):
     name = models.CharField(max_length=50)
     image_url = models.CharField(max_length=500)
+    charity = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.name
@@ -45,6 +46,7 @@ class Code(models.Model):
     quiz_complete = models.BooleanField(default=False)
     chosen_email = models.EmailField(blank=True, null=True)
     store = models.ForeignKey(Store, blank=True, null=True)
+    charity = models.BooleanField(default=False)
 
     def __string__(self):
         return self.code
