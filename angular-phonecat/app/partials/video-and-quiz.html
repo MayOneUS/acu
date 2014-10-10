@@ -9,15 +9,17 @@
 <ul ng-hide="hideQuiz" class="quiz">
     <li ng-repeat="question in questions">
     <h3>{{question.question}}            <span ng-hide="wrong_answers[question.id]" style='color:red;'>Oops! Try Again!</span>    </h3>
-        <ul>
+        <ol>
 
             <li ng-repeat="answer in question.answers">
-                <input type="radio" ng-model='answers[question.id]' name="{{ question.id }}" value="{{ answer.id }}">
-                {{ answer.text }}
+                <label id="choice">
+                  <input type="radio" ng-model='answers[question.id]' name="{{ question.id }}" value="{{ answer.id }}">
+                  {{ answer.text }}
+                </label>
             </li>
         </ul>
     </li>
-    <a class="btn btn-cta" ng-click="validate_quiz()"><span >CHECK ANSWERS!</span></a><span ng-hide="!wrongAnswer" style="color:red;padding-left:10px;">Some of your answers were incorrect, please review.</span>
+    <a id="check" class="btn btn-cta" ng-click="validate_quiz()"><span >CHECK ANSWERS!</span></a><span ng-hide="!wrongAnswer" style="color:red;padding-left:10px;">Some of your answers were incorrect, please review.</span>
 
 </ul>
 </div>
