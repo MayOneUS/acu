@@ -47,6 +47,7 @@ class Code(models.Model):
     chosen_email = models.EmailField(blank=True, null=True)
     store = models.ForeignKey(Store, blank=True, null=True)
     charity = models.BooleanField(default=False)
+    pay_it_foward = models.BooleanField(default=False)
 
     def __string__(self):
         return self.code

@@ -21,7 +21,11 @@ def Validate(request):
             return HttpResponse(status=400)
         try:
             code = Code.objects.get(code=token)
+
             try:
+                if code.pay_it_foward:
+                    return HttpResponse(json.dumps({'alreadyUsed':True}), status=200)
+
                 storeid = code.store.id
                 return HttpResponse(json.dumps({'alreadyUsed':True}), status=200)
             except:
@@ -144,13 +148,17 @@ def SaveStoreSelection(request):
         code.save()
         return HttpResponse(status=200)
 
-
+@csrf_exempt
 def PayItForward(request):
     body = json.loads(request.body)
     code = body.get('token', '')
     email = body.get('email', '')
     try:
         code = Code.objects.get(code=code)
-
+        code.email = email
+        code.pay_it_foward = True
+        code.save()
+        return HttpResponse(status=200)
     except:
         return HttpResponse(status=400)
+
