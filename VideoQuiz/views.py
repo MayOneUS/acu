@@ -115,7 +115,7 @@ def ListStores(request, token):
     except:
         return HttpResponse(status=400)
 
-    stores = Store.objects.filter(charity=True)
+    stores = Store.objects.filter(charity=code.charity)
 
     stores = [{'name':store.name, 'img_url':store.image_url} for store in stores]
     return HttpResponse(json.dumps(stores))
