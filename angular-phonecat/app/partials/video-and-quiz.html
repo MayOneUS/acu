@@ -1,32 +1,30 @@
 <div class="cross-stitched latest-news" style="padding-top:100px">
 
 <div class="container-fluid">
-  <div id="intro" class= "row">
-    <div class="col-md-5">
-      <h3> Click on the video to watch it. It is only 5 and a half minutes long. </h3>
+  <div id="intro" class= "row" style="height:425px;">
+    <div class="col-md-3">
+      <p> Click on the video to watch it. It is only 5 and a half minutes long. After you're finished, we'll ask you 6 questions.</p>
     </div>
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-5" id="appear">
+    <div class="col-md-2" style="">
+        <youtube-video id="good-vid" video-url="anotherGoodOne" player-vars="playerVars"></youtube-video>
+
     </div>
   </div>
-  <div class="row">
-      <div class="text-center">
-<youtube-video id="good-vid" video-url="anotherGoodOne" player-vars="playerVars"></youtube-video>
-</div>
-<div class="center-block">
+    <div class="row">
+    <div class="col-md-1"></div>
+<div class="col-md-10">
 <ul ng-hide="hideQuiz" class="quiz">
     <li ng-repeat="question in questions">
-    <h3>{{question.question}}            <span ng-hide="wrong_answers[question.id]" style='color:red;'>Oops! Try Again!</span>    </h3>
+    <h3>{{question.question}}
+        <span ng-hide="wrong_answers[question.id]" style='color:red;'>Oops! Try Again!</span>    </h3>
         <ol>
-
             <li ng-repeat="answer in question.answers">
                 <label id="choice">
                   <input type="radio" ng-model='answers[question.id]' name="{{ question.id }}" value="{{ answer.id }}">
                   {{ answer.text }}
                 </label>
             </li>
-        </ul>
+        </ol>
     </li>
     <a id="check" class="btn btn-cta" ng-click="validate_quiz()"><span >CHECK ANSWERS!</span></a><span ng-hide="!wrongAnswer" style="color:red;padding-left:10px;">Some of your answers were incorrect, please review.</span>
 
