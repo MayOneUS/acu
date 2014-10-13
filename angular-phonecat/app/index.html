@@ -15,6 +15,14 @@
   <script src="static/js/app.js"></script>
   <script src="static/js/controllers.js"></script>
   <script src="/static/js/filters.js"></script>
+  <script type="text/javascript" src="static/bower_components/jquery/jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      setTimeout(function () {
+        $("#appear").append("<h3>After you're finished, we'll ask you 6 questions.</h3>").fadeIn();
+      }, 5000);
+    });
+  </script>
 </head>
 <body>
 <header class="navbar navbar-fixed-top">
