@@ -7,7 +7,7 @@
     <p>We will use your email only to send your gift card to you.  We will not use your email for any other purpose or pass it on to anyone else.</p>
 </div>
 
-Email:<input type="email" ng-model="email"/>
+My Email:<input type="email" ng-model="email"/>
 <ul>
     <div class="row">
     <div class="span8" ng-repeat="store in stores">
@@ -16,12 +16,12 @@ Email:<input type="email" ng-model="email"/>
         <img src="{{ store.img_url }}" style="height:200px; width:300px"/>
     </div>
     </div>
-    <a class="btn btn-cta" ng-click="SaveStorePreference()">Send my gift!</a>
+    <a class="btn btn-cta" ng-click="SaveStorePreference()" style="margin-top:10px">Send my gift!</a>
 
 </ul>
 
-<p>or, pay it forward! Enter a friend's email who you want to see this video, and give them the gift card as incentive!</p>
-Email:<input type="email" ng-model="emailforward"/>
+<p style="margin-top:50px;">Or pay it forward! Enter a friend's email who you want to see this video, and give them the gift card as incentive!</p>
+My Friend's Email: <input type="email" ng-model="emailforward"/>
     <a class="btn btn-cta" ng-click="payForward()">Pay it forward!</a>
 
     </div>

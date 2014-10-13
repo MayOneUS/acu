@@ -25,7 +25,7 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
     $scope.orderProp = 'age';
     $scope.alreadyUsed = true;
     $scope.testCode = function(token) {
-    $http({method: 'GET', url: '/validate', params:{'token':token}}).
+    $http({method: 'GET', url: '/validate', params:{'token':token.toUpperCase()}}).
         success(function(data, status, headers, config) {
             if('alreadyUsed' in data){
                 $scope.alreadyUsed = false;
@@ -33,7 +33,7 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
             }
             $scope.Data.setQuiz(data);
             console.log(data)
-            $location.path('/video/' + token);
+            $location.path('/video/' + token.toUpperCase());
         }).
         error(function(data, status, headers, config) {
             $scope.validCode = false;

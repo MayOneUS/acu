@@ -48,4 +48,4 @@ Store.objects.create(name="Kohl's", image_url="/static/images/giftcardimages/Koh
 
 
 james = Voter.objects.create(firstName='james', lastName='madison', address='america')
-code = Code.objects.create(code='testcode', voter=james, quiz=quiz)
+code = Code.objects.create(code='TESTCODE', voter=james, quiz=quiz)
