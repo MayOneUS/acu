@@ -10,7 +10,7 @@
 My Email:<input type="email" ng-model="email"/>
 <ul>
     <div class="row">
-    <div class="col-xs-6 col-md-4" ng-repeat="store in stores">
+    <div class="span8" ng-repeat="store in stores">
         <input type="radio" ng-model="$parent.storeName" value="{{ store.name }}" name="thestore">
 
         <img src="{{ store.img_url }}" style="height:200px; width:300px"/>
