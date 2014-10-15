@@ -64,12 +64,17 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
                 })
         }
         $scope.SaveStorePreference = function() {
-            var data = {
-                'storeSelection': $scope.storeName,
-                'token':$routeParams.token,
-                'email':$scope.email
-            }
+           var data = {
+               'storeSelection': $scope.storeName,
+               'token':$routeParams.token,
+               'email':$scope.email,
+               'storeemail':$scope.emailSignupInput
+           }
 
+   	    $http({method:'POST', url: 'https://pledge.mayday.us/r/subscribe/', 'data':$scope.emailSignupInput}).
+		success(function (data) {
+   		    $location.path('/thanks/')
+		})
             console.log($scope.storeName)
             $http({method:'POST', url: '/SaveStoreSelection/', 'data':data}).
                 success(function (data) {
