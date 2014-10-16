@@ -53,6 +53,7 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
             success(function(data) {
                 $scope.stores = data;
             })
+        $scope.emailSignupInput = true;
         $scope.payForward = function() {
             var data = {
                 'token':$routeParams.token,
