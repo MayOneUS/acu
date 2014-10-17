@@ -27,6 +27,8 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
     $scope.testCode = function(token) {
     $http({method: 'GET', url: '/validate', params:{'token':token.toUpperCase()}}).
         success(function(data, status, headers, config) {
+            ga('send', 'event', 'button', 'codeSubmit', token.toUpperCase());
+
             if('alreadyUsed' in data){
                 $scope.alreadyUsed = false;
                 return;
@@ -36,6 +38,8 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
             $location.path('/video/' + token.toUpperCase());
         }).
         error(function(data, status, headers, config) {
+            ga('send', 'event', 'button', 'codeSubmit', 'failure');
+
             $scope.validCode = false;
         })
     }

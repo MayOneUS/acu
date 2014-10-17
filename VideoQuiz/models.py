@@ -38,7 +38,7 @@ class Store(models.Model):
         return self.name
 
 class Code(models.Model):
-    code = models.CharField(max_length=20)
+    code = models.CharField(max_length=20, unique=True)
     voter = models.ForeignKey(Voter)
     started_watching = models.DateTimeField(null=True, blank=True)
     finished_watching = models.DateTimeField(null=True, blank=True)
