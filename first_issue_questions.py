@@ -3,7 +3,7 @@ __author__ = 'daniel'
 
 from VideoQuiz.models import Quiz, Question, Answer, Code, Voter, Store
 
-quiz = Quiz.objects.create(name="First Issue", video_url='http://www.youtube.com/embed/xnRpMQvW_ow')
+quiz = Quiz.objects.create(name="First Issue", video_url='https://www.youtube.com/watch?v=KoS-CNYcTlY')
 q1 = Question.objects.create(quiz=quiz, question="Today, politicans spend as much as what percentage of their time on fundraising?")
 Answer.objects.create(question=q1, answer="10%")
 Answer.objects.create(question=q1, answer="30%")
