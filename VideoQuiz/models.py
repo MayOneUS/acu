@@ -48,6 +48,7 @@ class Code(models.Model):
     store = models.ForeignKey(Store, blank=True, null=True)
     charity = models.BooleanField(default=False)
     pay_it_foward = models.BooleanField(default=False)
+    giftcard_amount = models.FloatField(default=10)
 
     def __string__(self):
         return self.code

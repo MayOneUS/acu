@@ -122,7 +122,8 @@ def ListStores(request, token):
     stores = Store.objects.filter(charity=code.charity)
 
     stores = [{'name':store.name, 'img_url':store.image_url} for store in stores]
-    return HttpResponse(json.dumps(stores))
+    d = {'stores':stores, 'giftcard_amount':"$" + str(int(code.giftcard_amount))}
+    return HttpResponse(json.dumps(d))
 
 
 @csrf_exempt

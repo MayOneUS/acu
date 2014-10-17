@@ -47,12 +47,16 @@ acuControllers.controller('SelectGiftCtrl', ['$scope', '$routeParams', '$http',
     }]);
 
 
-acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$location',
-    function($scope, $routeParams, $http, $location) {
+acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$location', '$anchorScroll',
+    function($scope, $routeParams, $http, $location, $anchorScroll) {
         $http({method: 'GET', url: '/ListStores/' + $routeParams.token}).
             success(function(data) {
-                $scope.stores = data;
+                $scope.stores = data['stores'];
+                $scope.giftAmount = data.giftcard_amount;
             })
+        $scope
+        $location.hash('top');
+        $anchorScroll();
         $scope.emailSignupInput = true;
         $scope.payForward = function() {
             var data = {
