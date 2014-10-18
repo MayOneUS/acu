@@ -17,7 +17,7 @@ Answer.objects.create(question=q2, answer="Represent we, the people", correct=Tr
 Answer.objects.create(question=q2, answer="Wait for an emergency, and then step in to act")
 Answer.objects.create(question=q2, answer="Practice making speeches in front of the mirror")
 
-q3 = Question.objects.create(quiz=quiz, question="Three of the US's top 10 grossing companies paid taxesat a low rate. That rate was:")
+q3 = Question.objects.create(quiz=quiz, question="Three of the US's top 10 grossing companies paid taxes at a low rate. That rate was:")
 Answer.objects.create(question=q3, answer="0%", correct=True)
 Answer.objects.create(question=q3, answer="1%")
 Answer.objects.create(question=q3, answer="3%")
