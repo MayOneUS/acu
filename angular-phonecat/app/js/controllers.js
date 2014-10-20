@@ -38,7 +38,7 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
             $location.path('/video/' + token.toUpperCase());
         }).
         error(function(data, status, headers, config) {
-            ga('send', 'event', 'button', 'codeSubmit', 'failure');
+            ga('send', 'event', 'button', 'codeSubmitFailure', token.toUpperCase());
 
             $scope.validCode = false;
         })
