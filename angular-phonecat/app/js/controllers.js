@@ -105,8 +105,9 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
 acuControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http', '$cookies', '$location', "Data",
     function($scope, $routeParams, $http, $cookies, $location, Data) {
 	    $scope.playerVars = {
-	        controls: 0,
-	        autoplay: 0
+	        controls: 2,
+	        autoplay: 0,
+            wmode: "transparent"
 	    }
         $scope.hideQuiz = true;
         $scope.token = $routeParams.token;
