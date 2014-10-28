@@ -62,10 +62,18 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
         $location.hash('top');
         $anchorScroll();
         $scope.emailSignupInput = true;
+        $scope.validateEmail = function(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
         $scope.payForward = function() {
             var data = {
                 'token':$routeParams.token,
                 'email':$scope.emailforward
+            }
+            if (typeof $scope.emailforward === "undefined" ||
+                !$scope.validateEmail($scope.emailforward)) {
+                return;
             }
             $http({method:'POST', url: '/PayItForward/', 'data':data}).
                 success(function (data) {
@@ -73,6 +81,10 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
                 })
         }
         $scope.SaveStorePreference = function() {
+           if(typeof $scope.emailSignupInput === "undefined" ||
+               !$scope.validateEmail($scope.emailSignupInput)) {
+               return;
+           }
            var data = {
                'storeSelection': $scope.storeName,
                'token':$routeParams.token,
