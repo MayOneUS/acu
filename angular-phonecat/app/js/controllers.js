@@ -34,7 +34,6 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
                 return;
             }
             $scope.Data.setQuiz(data);
-            console.log(data)
             $location.path('/video/' + token.toUpperCase());
         }).
         error(function(data, status, headers, config) {
@@ -47,7 +46,6 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
   }]);
 acuControllers.controller('SelectGiftCtrl', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
-        console.log('in the select gift control')
     }]);
 
 
@@ -95,7 +93,6 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
    	    $http({method:'POST', url: 'https://pledge.mayday.us/r/subscribe/', 'data':$scope.emailSignupInput}).
 		success(function (data) {
 		})
-            console.log($scope.storeName)
             $http({method:'POST', url: '/SaveStoreSelection/', 'data':data}).
                 success(function (data) {
                     $location.path('/thanks/');
@@ -139,15 +136,12 @@ acuControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
         })
 
     $scope.validate_quiz = function() {
-        console.log($cookies.csrf_token)
         var data = {'token':$scope.token,
             'answers':$scope.answers
         }
 
         $http({method: 'POST', url: '/ValidateQuiz/', data:{'data':data}}).
             success(function(data, status, headers, config) {
-                console.log('success!');
-                console.log(data);
                 for(var k in $scope.wrong_answers) $scope.wrong_answers[k] = true;
 
                 if(data['charity'] == true)
@@ -160,16 +154,10 @@ acuControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
 
             }).
             error(function(data, status, headers, config) {
-
-
-                console.log($scope.wrong_answers)
-                console.log(data);
                 for(var k in $scope.wrong_answers) $scope.wrong_answers[k] = true;
                 for(var i = 0; i < data.length; i++) $scope.wrong_answers[data[i]] = false;
-                console.log($scope.wrong_answers)
                 $scope.wrongAnswer = true;
             });
-        console.log(data)
     };
   }
   ]);
