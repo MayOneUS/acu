@@ -56,7 +56,6 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
                 $scope.stores = data['stores'];
                 $scope.giftAmount = data.giftcard_amount;
             })
-        $scope
         $location.hash('top');
         $anchorScroll();
         $scope.emailSignupInput = true;
@@ -79,8 +78,8 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
                 })
         }
         $scope.SaveStorePreference = function() {
-           if(typeof $scope.emailSignupInput === "undefined" ||
-               !$scope.validateEmail($scope.emailSignupInput)) {
+           if(typeof $scope.email === "undefined" ||
+               !$scope.validateEmail($scope.email)) {
                return;
            }
            var data = {
