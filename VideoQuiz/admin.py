@@ -1,5 +1,11 @@
 from django.contrib import admin
-from models import Code, Voter, Quiz, Question, Answer, Store
+from models import Code, Voter, Quiz, Question, Answer, Store, CodeSubmission
+
+
+class CodeSubmissionAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(CodeSubmission, CodeSubmissionAdmin)
+
 
 class CodeAdmin(admin.ModelAdmin):
     pass
@@ -10,8 +16,11 @@ class VoterAdmin(admin.ModelAdmin):
     pass
 admin.site.register(Voter, VoterAdmin)
 
+
 class AnswerInline(admin.TabularInline):
     model = Answer
+
+
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [
         AnswerInline
@@ -27,11 +36,13 @@ admin.site.register(Answer, AnswerAdmin)
 class QuestionInline(admin.TabularInline):
     model = Question
 
+
 class QuizAdmin(admin.ModelAdmin):
     inlines = [
         QuestionInline
     ]
 admin.site.register(Quiz, QuizAdmin)
+
 
 class StoreAdmin(admin.ModelAdmin):
     pass

@@ -77,3 +77,9 @@ class QuizResponse(models.Model):
     answers = models.ManyToManyField(Answer)
     quiz = models.ForeignKey(Quiz)
 
+class CodeSubmission(models.Model):
+    token = models.TextField(max_length=200)
+    ip_address = models.TextField(max_length=20)
+
+    def __unicode__(self):
+        return self.token + ": " + self.ip_address

@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from models import Code, Store
+from models import Code, Store, CodeSubmission
 from django.views.generic import View
 from django.http import HttpResponse
 from datetime import datetime
@@ -20,6 +20,11 @@ def Validate(request):
         if token == '':
             return HttpResponse(status=400)
         try:
+            try:
+                ip = get_client_ip(request)
+                CodeSubmission.objects.create(token=token, ip_address=ip)
+            except:
+                pass
             code = Code.objects.get(code=token)
 
             try:
@@ -163,3 +168,10 @@ def PayItForward(request):
     except:
         return HttpResponse(status=400)
 
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[-1].strip()
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
