@@ -93,6 +93,10 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
                success(function (data) {
                })
             }
+           }
+            catch(err){
+
+            }
             $http({method:'POST', url: '/SaveStoreSelection/', 'data':data}).
                 success(function (data) {
                     $location.path('/done');

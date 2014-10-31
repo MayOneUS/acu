@@ -13,6 +13,7 @@
         <td>Giftcard Amount</td>
         <td>Store/Charity</td>
         <td>Email</td>
+        <td>Pay it forward</td>
     </thead>
     {% for code in completed  %}
         <tr>
@@ -23,6 +24,7 @@
             <td>{{ code.giftcard_amount }}</td>
             <td>{{ code.store.name }}</td>
             <td>{{ code.chosen_email }}</td>
+            <td>{{ code.pay_it_foward }}</td>
         </tr>
     {% endfor %}
 </table>

@@ -180,6 +180,6 @@ def get_client_ip(request):
 
 @login_required(login_url='/admin')
 def CompletedReport(request):
-    completed = Code.objects.filter(quiz_complete=True)
+    completed = Code.objects.filter(quiz_complete=True).order_by("started_watching").reverse()
     context = {'completed':completed}
     return render_to_response('complete_report.html', context)
