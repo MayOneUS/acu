@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<table>
+    <thead>
+        <td>Name</td>
+        <td>Started</td>
+        <td>Finished</td>
+        <td>Giftcard Amount</td>
+        <td>Store/Charity</td>
+        <td>Email</td>
+    </thead>
+    {% for code in completed  %}
+        <tr>
+            <td>{{ code.name }}</td>
+            <td>{{ code.started_watching }}</td>
+            <td>{{ code.finished_watching }}</td>
+            <td>{{ code.giftcard_amount }}</td>
+            <td>{{ code.store.name }}</td>
+            <td>{{ code.chosen_email }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
