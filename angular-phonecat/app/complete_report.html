@@ -7,6 +7,7 @@
 <table>
     <thead>
         <td>Name</td>
+        <td>Code</td>
         <td>Started</td>
         <td>Finished</td>
         <td>Giftcard Amount</td>
@@ -15,7 +16,8 @@
     </thead>
     {% for code in completed  %}
         <tr>
-            <td>{{ code.name }}</td>
+            <td>{{ code.voter.firstName }} {{ code.voter.lastName }}</td>
+            <td>{{ code.code }}</td>
             <td>{{ code.started_watching }}</td>
             <td>{{ code.finished_watching }}</td>
             <td>{{ code.giftcard_amount }}</td>
