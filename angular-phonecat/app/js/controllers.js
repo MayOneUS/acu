@@ -44,10 +44,6 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
     }
 
   }]);
-acuControllers.controller('SelectGiftCtrl', ['$scope', '$routeParams', '$http',
-    function($scope, $routeParams, $http) {
-    }]);
-
 
 acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$location', '$anchorScroll',
     function($scope, $routeParams, $http, $location, $anchorScroll) {
@@ -162,3 +158,8 @@ acuControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
     };
   }
   ]);
+
+acuControllers.controller('DoneCtrl', ['$scope',
+    function($scope) {
+        $scope.asdf="truf";
+    }]);

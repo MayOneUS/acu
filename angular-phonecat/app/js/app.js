@@ -21,17 +21,18 @@ acuApp.config(['$routeProvider',
         templateUrl: 'static/partials/video-and-quiz.html',
         controller: 'PhoneDetailCtrl'
       }).
-      when('/thanks/:token', {
+      when('/done', {
+        templateUrl: 'static/partials/done.html',
+        controller:'DoneCtrl'
+      }).
+        when('/thanks/:token', {
           templateUrl: 'static/partials/thanks.html',
           controller: 'ThanksCtrl'
-      }).
+        }).
+
       when('/donation/:token', {
         templateUrl: 'static/partials/donation.html',
         controller: 'ThanksCtrl'
-      }).
-      when('/select/:token', {
-          TemplateUrl: 'static/partials/select.html',
-          controller: 'SelectGiftCtrl'
       }).
       otherwise({
         redirectTo: '/'
