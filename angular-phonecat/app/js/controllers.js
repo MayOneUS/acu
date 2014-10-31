@@ -84,7 +84,6 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
                'email':$scope.email,
                'storeemail':$scope.emailSignupInput
            }
-           try {
            if($scope.emailSignupInput){
                $http({method:'POST', url: 'https://pledge.mayday.us/r/subscribe',
                    'data': $.param({'email':$scope.email}),
@@ -92,10 +91,6 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
                }).
                success(function (data) {
                })
-            }
-           }
-            catch(err){
-
             }
             $http({method:'POST', url: '/SaveStoreSelection/', 'data':data}).
                 success(function (data) {
