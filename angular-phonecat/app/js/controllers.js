@@ -88,10 +88,11 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
                'email':$scope.email,
                'storeemail':$scope.emailSignupInput
            }
-
-   	    $http({method:'POST', url: 'https://pledge.mayday.us/r/subscribe/', 'data':$scope.emailSignupInput}).
-		success(function (data) {
-		})
+           if($scope.emailSignupInput){
+               $http({method:'POST', url: 'https://pledge.mayday.us/r/subscribe', 'data':$scope.email}).
+               success(function (data) {
+               })
+            }
             $http({method:'POST', url: '/SaveStoreSelection/', 'data':data}).
                 success(function (data) {
                     $location.path('/thanks/');
