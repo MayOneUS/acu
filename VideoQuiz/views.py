@@ -161,7 +161,7 @@ def PayItForward(request):
     email = body.get('email', '')
     try:
         code = Code.objects.get(code=code)
-        code.email = email
+        code.chosen_email = email
         code.pay_it_foward = True
         code.save()
         return HttpResponse(status=200)

@@ -70,7 +70,7 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
             }
             $http({method:'POST', url: '/PayItForward/', 'data':data}).
                 success(function (data) {
-                    $location.path('/thanks/')
+                    $location.path('/done')
                 })
         }
         $scope.SaveStorePreference = function() {
