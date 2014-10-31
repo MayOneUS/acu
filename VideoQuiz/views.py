@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from datetime import datetime
 from django.core.context_processors import csrf
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 
 import json
 
@@ -175,3 +176,10 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     return ip
+
+
+@login_required(login_url='/admin')
+def CompletedReport(request):
+    completed = Code.objects.filter(quiz_complete=True)
+    context = {'completed':completed}
+    return render_to_response('complete_report.html', context)

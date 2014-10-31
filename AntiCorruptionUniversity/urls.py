@@ -40,5 +40,7 @@ urlpatterns = patterns('',
     url(r'^PayItForward/$',
         'VideoQuiz.views.PayItForward',
         name='pay-it-forward'),
+    url(r'^report/$',
+        'VideoQuiz.views.CompletedReport'),
     url(r'^admin/', include(admin.site.urls)),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
