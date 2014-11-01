@@ -1,5 +1,5 @@
 from django.db import models
-
+import datetime
 # Create your models here.
 class Voter(models.Model):
     firstName = models.CharField(max_length=100)
@@ -80,6 +80,7 @@ class QuizResponse(models.Model):
 class CodeSubmission(models.Model):
     token = models.TextField(max_length=200)
     ip_address = models.TextField(max_length=20)
+    time = models.DateTimeField(auto_now_add=True, default=datetime.datetime.now)
 
     def __unicode__(self):
-        return self.token + ": " + self.ip_address
+        return self.token + ": " + self.ip_address + ", " + str(self.time)

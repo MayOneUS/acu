@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'VideoQuiz',
+    'south'
 )
 TEMPLATE_DIRS = ('templates', 'angular-phonecat/app')
 MIDDLEWARE_CLASSES = (
