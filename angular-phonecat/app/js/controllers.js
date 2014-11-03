@@ -47,7 +47,7 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
 
 acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$location', '$anchorScroll',
     function($scope, $routeParams, $http, $location, $anchorScroll) {
-        $http({method: 'GET', url: '/ListStores/' + $routeParams.token}).
+        $http({method: 'GET', url: '/ListStores/' + $routeParams.token + "/"}).
             success(function(data) {
                 $scope.stores = data['stores'];
                 $scope.giftAmount = data.giftcard_amount;
