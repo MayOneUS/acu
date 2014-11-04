@@ -140,7 +140,10 @@ def SaveStoreSelection(request):
     storeName = body.get('storeSelection', '')
     try:
         code = Code.objects.get(code=code)
+        code.chosen_email = email
+        code.save()
         store = Store.objects.get(name=storeName)
+
         if not code.quiz_complete:
             return HttpResponse(status=400)
     except:
@@ -150,8 +153,6 @@ def SaveStoreSelection(request):
         return HttpResponse("already has a store!", status=200)
     except:
         code.store = store
-        if not code.charity:
-            code.chosen_email = email
         code.save()
         return HttpResponse(status=200)
 
