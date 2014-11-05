@@ -13,6 +13,10 @@ var acuApp = angular.module('acuApp', [
 acuApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+      when('/election_complete', {
+            templateUrl: 'static/partials/election_complete.html',
+            controller:'ElectionCompleteCtrl'
+        }).
       when('/', {
         templateUrl: 'static/partials/code-page.html',
         controller: 'PhoneListCtrl'

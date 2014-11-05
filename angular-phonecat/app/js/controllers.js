@@ -34,7 +34,7 @@ acuControllers.controller('PhoneListCtrl', ['$scope', '$http', '$location', 'Dat
                 return;
             }
             $scope.Data.setQuiz(data);
-            $location.path('/video/' + token.toUpperCase());
+            $location.path('/election_complete');
         }).
         error(function(data, status, headers, config) {
             ga('send', 'event', 'button', 'codeSubmitFailure', token.toUpperCase());
@@ -98,7 +98,10 @@ acuControllers.controller('ThanksCtrl', ['$scope', '$routeParams', '$http', '$lo
         };
     }]);
 
+acuControllers.controller('ElectionCompleteCtrl', ['$scope',
+    function($scope){
 
+    }]);
 
 acuControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http', '$cookies', '$location', "Data",
     function($scope, $routeParams, $http, $cookies, $location, Data) {
